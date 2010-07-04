@@ -10,17 +10,13 @@ html {
 #container {
 	width: 1020px;
 	margin: 0 auto;
-
 }
-
-
 
 /* ------------------------- HEADER ------------------------- */
 
 #header {
 	background: transparent url(../img/header-bg.jpg) repeat-x 0 0;
-	height: 104px /* 101px */;		/* had to increase header-bg img because featured bg img was overlapping the hover effect in the nav */
-	position: relative;
+	height: 104px;		/* had to increase header-bg img because featured bg img was overlapping the hover effect in the nav */
 }
 
 	#header h1 a{
@@ -35,69 +31,52 @@ html {
 	
 	ul#nav {
 		display: block;
-						float: right;
+		float: right;
 		width: 444px;
 		height: 89px;
 		background: url(../img/nav.jpg) no-repeat 0 0;
-		
 		margin: 15px 35px -3px 0;
 	}
 	
 	ul#nav li {
 		list-style: none;
-		
 		float: left;
-		
 		text-indent: -9999px;
 	}
-
 	
-		#home {
-			width: 92px;
-		}
+		#home { width: 92px; }
+		#about { width: 101px; }
+		#portfolio { width: 141px; }
+		#contact { width: 110px; }
 		
-		#about {
-			width: 101px;
+		ul#nav li a {
+			display: block;
+			height: 89px;
 		}
-		
-		#portfolio {
-			width: 141px;
-		}
-		
-		#contact {
-			width: 110px;
-		}
-		
-	ul#nav li a {
-		display: block;
-		height: 89px;
-	}
 	
-		#home a:hover/*, ul#nav li.selected*/ {
-			background: url(../img/nav.jpg) 0 -89px no-repeat;
-		}
+			#home a:hover/*, ul#nav li.selected*/ {
+				background: url(../img/nav.jpg) 0 -89px no-repeat;
+			}
 		
-		#about a:hover {
-			background: url(../img/nav.jpg) -92px -89px no-repeat;
-		}
+			#about a:hover {
+				background: url(../img/nav.jpg) -92px -89px no-repeat;
+			}
 		
-		#portfolio a:hover {
-			background: url(../img/nav.jpg) -193 -89px no-repeat;
-		}
+			#portfolio a:hover {
+				background: url(../img/nav.jpg) -193 -89px no-repeat;
+			}
 		
-		#contact a:hover {
-			background: url(../img/nav.jpg) -334 -89px no-repeat;
-		}
-
+			#contact a:hover {
+				background: url(../img/nav.jpg) -334 -89px no-repeat;
+			}
 
 /* ------------------------- FEATURED AREA ------------------------- */
-
 
 #featured {
 	clear: both;
 	position: relative;
 	background: url(../img/featured-bg.jpg) no-repeat 0 0;
-	height: 397px /* 400px */;
+	height: 397px;
 }
 
 	#featured h2 {
@@ -109,7 +88,6 @@ html {
 		top: 51px;
 		left: 61px;
 	}
-
 
 /* ------------------------- CONTENT ------------------------- */
 
@@ -127,13 +105,9 @@ html {
 		background-color: transparent;
 	}
 	
-		#col1 {
-			width: 480px;
-		}
+		#col1 { width: 480px; }
 		
-		#col2 {
-			width: 440px;
-		}
+		#col2 { width: 440px; }
 	
 			h3, h4 {
 				font-family: 'Rockwell Std', Arial, sans-serif;
@@ -177,14 +151,13 @@ html {
 			}
 			
 			.web {
-				background: transparent url(../img/web.bg.jpg) no-repeat center top;
+				background: transparent url(../img/web-bg.jpg) no-repeat center top;
 			}
 
 		#col2 #work ul {
 			width: 440px;
 			height: 52px;
 			border-bottom: 3px solid #2d1a14;
-			
 		}
 		
 		#col2 #work ul li {
@@ -197,22 +170,19 @@ html {
 			margin-left: 34px;
 		}
 		
-		#col2 #work ul li a {
-			color: #e18610;
-			text-decoration: none;
-		}
-
-			
-			#col2 #work ul li:first-child {
-				margin-left: 0;
-			}
-			
-			#col2 #work ul li.selected, #col2 #work ul li:hover {
-				background: url("../img/arrow.jpg") no-repeat scroll 50% 100% transparent
+			#col2 #work ul li a {
+				color: #e18610;
+				text-decoration: none;
 			}
 
+				#col2 #work ul li:first-child {
+					margin-left: 0;
+				}
+			
+				#col2 #work ul li.selected, #col2 #work ul li:hover {
+					background: url("../img/arrow.jpg") no-repeat scroll 50% 100% transparent
+				}
 
-		
 			#col2 #samples ul {
 				display: block;
 				margin-top: 35px;
@@ -228,9 +198,9 @@ html {
 					float: right;
 				}
 			
-			#col2 #samples img {
-				border: none;
-			}
+				#col2 #samples img {
+					border: none;
+				}
 
 		.subColLeft {
 			width: 204px;
@@ -260,14 +230,11 @@ html {
 				margin-top: 26px;
 			}
 
-
 /* ------------------------- FOOTER ------------------------- */
 
-	
 #footer {
 	clear: both;
 	background: #2f1c16 url(../img/footer-bg.jpg) repeat-x center top;
-	padding-top: 50px;
 	padding-left: 3px;
 	height: 335px;
 }
@@ -277,6 +244,7 @@ html {
 	}
 	
 	#footer .box {
+		margin-top: 50px;
 		width: 272px;
 		height: 238px;
 		background: #6b3d0c url(../img/box.jpg) no-repeat;
@@ -284,41 +252,39 @@ html {
 		margin-left: 49px;
 	}
 	
-	.box h4 {
-		color: #fcf6c4;
-		padding: 18px 0 0 52px;
-	}
+		.box h4 {
+			color: #fcf6c4;
+			padding: 18px 0 0 52px;
+		}
 	
-	.box p#subHeading {
-		color: #fcf6c4;
-		margin-top: -21px;
-		padding-left: 52px;
-	}
+		.box p#subHeading {
+			color: #fcf6c4;
+			margin-top: -21px;
+			padding-left: 52px;
+		}
 	
-	.box p {
-		color: #c27819;
-		margin: 16px 0 20px;
-		padding: 0 21px 0 52px;
-	}
+		.box p {
+			color: #c27819;
+			margin: 16px 0 20px;
+			padding: 0 21px 0 52px;
+		}
 	
-	.box p#button {
-		display: block;
-		padding-left: 83px;
-	}
+			.box p#button {
+				display: block;
+				padding-left: 83px;
+			}
 	
-	.box p#button a {
-		color: #2f1c16;
-		text-transform: uppercase;
-		text-decoration: none;
-	}
+				.box p#button a {
+					color: #2f1c16;
+					text-transform: uppercase;
+					text-decoration: none;
+				}
 	
-	.box span {
-		font-style: italic;
-	}
-
+		.box span {
+			font-style: italic;
+		}
 
 /* ------------------------- BOTTOM ------------------------- */
-
 
 #bottom {
 	clear: both;
@@ -354,17 +320,8 @@ html {
 				color: #c27819;
 				text-decoration: none;
 			}
-			
-			
-		
+
 	#bottom p {
 		float: right;
 		margin-right: 37px;
 	}
-	
-	
-	
-	
-	
-	
-	
