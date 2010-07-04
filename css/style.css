@@ -1,0 +1,370 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	background-color: #E18610;
+}
+
+#container {
+	width: 1020px;
+	margin: 0 auto;
+
+}
+
+
+
+/* ------------------------- HEADER ------------------------- */
+
+#header {
+	background: transparent url(../img/header-bg.jpg) repeat-x 0 0;
+	height: 104px /* 101px */;		/* had to increase header-bg img because featured bg img was overlapping the hover effect in the nav */
+	position: relative;
+}
+
+	#header h1 a{
+		display: block;
+		float: left;
+		background: url(../img/logo.jpg) no-repeat 0 0;
+		width: 257px;
+		height: 71px;
+		text-indent: -9999px;
+		margin: 2px 0 0 38px;
+	}
+	
+	ul#nav {
+		display: block;
+						float: right;
+		width: 444px;
+		height: 89px;
+		background: url(../img/nav.jpg) no-repeat 0 0;
+		
+		margin: 15px 35px -3px 0;
+	}
+	
+	ul#nav li {
+		list-style: none;
+		
+		float: left;
+		
+		text-indent: -9999px;
+	}
+
+	
+		#home {
+			width: 92px;
+		}
+		
+		#about {
+			width: 101px;
+		}
+		
+		#portfolio {
+			width: 141px;
+		}
+		
+		#contact {
+			width: 110px;
+		}
+		
+	ul#nav li a {
+		display: block;
+		height: 89px;
+	}
+	
+		#home a:hover/*, ul#nav li.selected*/ {
+			background: url(../img/nav.jpg) 0 -89px no-repeat;
+		}
+		
+		#about a:hover {
+			background: url(../img/nav.jpg) -92px -89px no-repeat;
+		}
+		
+		#portfolio a:hover {
+			background: url(../img/nav.jpg) -193 -89px no-repeat;
+		}
+		
+		#contact a:hover {
+			background: url(../img/nav.jpg) -334 -89px no-repeat;
+		}
+
+
+/* ------------------------- FEATURED AREA ------------------------- */
+
+
+#featured {
+	clear: both;
+	position: relative;
+	background: url(../img/featured-bg.jpg) no-repeat 0 0;
+	height: 397px /* 400px */;
+}
+
+	#featured h2 {
+		background: url(../img/featured-slide1.png) no-repeat 0 0;
+		text-indent: -9999px;
+		width: 900px;
+		height: 246px;
+		position: absolute;
+		top: 51px;
+		left: 61px;
+	}
+
+
+/* ------------------------- CONTENT ------------------------- */
+
+#content {
+	padding-top: 50px;
+	background: #fff url(../img/content-bg.jpg) repeat-x top center;
+	font: 15px/18px Arial, Verdana, sans-serif;
+	color: ##2d1a14;
+	min-height: 549px;
+}
+
+	#col1, #col2 {
+		margin-left: 36px;
+		float: left;
+		background-color: transparent;
+	}
+	
+		#col1 {
+			width: 480px;
+		}
+		
+		#col2 {
+			width: 440px;
+		}
+	
+			h3, h4 {
+				font-family: 'Rockwell Std', Arial, sans-serif;
+				font-weight: normal;
+				color: #e18610;
+			}
+			
+			h3 {
+				font-size: 30px;
+				text-transform: uppercase;
+				margin-bottom: 9px;
+			}
+			
+			h4 {
+				font-size: 25px;
+				margin-bottom: 14px;
+			}
+			
+			p#strong {
+				margin-bottom: 18px;		/* is there any special selector for the strong tag?  */
+			}
+			
+			p#welcome {
+				margin-bottom: 36px;
+			}
+			
+			a {
+				color: #a6620a;
+			}
+
+		#col1 .service {
+			padding: 18px 5px 17px 110px;
+		}
+		
+			.graphic {
+				background: transparent url(../img/graphic-bg.jpg) no-repeat center top;
+			}
+			
+			.photography {
+				background: transparent url(../img/photography-bg.jpg) no-repeat center top;
+			}
+			
+			.web {
+				background: transparent url(../img/web.bg.jpg) no-repeat center top;
+			}
+
+		#col2 #work ul {
+			width: 440px;
+			height: 52px;
+			border-bottom: 3px solid #2d1a14;
+			
+		}
+		
+		#col2 #work ul li {
+			height: 52px;
+			list-style: none;
+			float: left;
+			display: inline;
+			text-transform: uppercase;
+			letter-spacing: 2.4px;
+			margin-left: 34px;
+		}
+		
+		#col2 #work ul li a {
+			color: #e18610;
+			text-decoration: none;
+		}
+
+			
+			#col2 #work ul li:first-child {
+				margin-left: 0;
+			}
+			
+			#col2 #work ul li.selected, #col2 #work ul li:hover {
+				background: url("../img/arrow.jpg") no-repeat scroll 50% 100% transparent
+			}
+
+
+		
+			#col2 #samples ul {
+				display: block;
+				margin-top: 35px;
+			}
+			
+			#col2 #samples ul li {
+				list-style: none;
+				float: left;
+				margin-bottom: 32px;
+			}
+			
+				#col2 #samples ul li.right {
+					float: right;
+				}
+			
+			#col2 #samples img {
+				border: none;
+			}
+
+		.subColLeft {
+			width: 204px;
+			float: left;
+		}
+		
+		.subColRight {
+			width: 204px;
+			float: right;
+		}
+		
+			#hireUsButton {
+				display: block;
+				background: url(../img/hireUsButton.gif) no-repeat;
+				width: 170px;
+				height: 44px;
+				text-indent: -9999px;
+				margin-top: 26px;
+			}
+			
+			#seeMoreButton {
+				display: block;
+				background: url(../img/seeMoreButton.gif) no-repeat;
+				width: 170px;
+				height: 44px;
+				text-indent: -9999px;
+				margin-top: 26px;
+			}
+
+
+/* ------------------------- FOOTER ------------------------- */
+
+	
+#footer {
+	clear: both;
+	background: #2f1c16 url(../img/footer-bg.jpg) repeat-x center top;
+	padding-top: 50px;
+	padding-left: 3px;
+	height: 335px;
+}
+
+	#footer p {
+		font: 15px Arial, Verdana, sans-serif;
+	}
+	
+	#footer .box {
+		width: 272px;
+		height: 238px;
+		background: #6b3d0c url(../img/box.jpg) no-repeat;
+		float: left;
+		margin-left: 49px;
+	}
+	
+	.box h4 {
+		color: #fcf6c4;
+		padding: 18px 0 0 52px;
+	}
+	
+	.box p#subHeading {
+		color: #fcf6c4;
+		margin-top: -21px;
+		padding-left: 52px;
+	}
+	
+	.box p {
+		color: #c27819;
+		margin: 16px 0 20px;
+		padding: 0 21px 0 52px;
+	}
+	
+	.box p#button {
+		display: block;
+		padding-left: 83px;
+	}
+	
+	.box p#button a {
+		color: #2f1c16;
+		text-transform: uppercase;
+		text-decoration: none;
+	}
+	
+	.box span {
+		font-style: italic;
+	}
+
+
+/* ------------------------- BOTTOM ------------------------- */
+
+
+#bottom {
+	clear: both;
+	padding-top: 50px;
+	background: transparent url(../img/bottom-bg.jpg) repeat-x 0 0;
+	height: 115px;
+	font: 15px Arial, Verdana, sans-serif;
+	color: #2f1c16;
+}
+
+	#bottom ul {
+		float: left;
+		margin-left: 37px;
+	}
+	
+		#bottom ul li {
+			list-style: none;
+			float: left;
+			margin-left: 10px;
+			padding-left: 10px;
+			border-left: 1px solid #c27819;
+		}
+		
+			#bottom ul li.selected a {
+				color: #2f1c16;
+			}
+			
+				#bottom ul li:first-child {
+					border-left: none;
+				}
+			
+			#bottom ul li a, #bottom a {
+				color: #c27819;
+				text-decoration: none;
+			}
+			
+			
+		
+	#bottom p {
+		float: right;
+		margin-right: 37px;
+	}
+	
+	
+	
+	
+	
+	
+	

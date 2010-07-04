@@ -1,12 +1,123 @@
-<!DOCTYPE html>
-	<html>
+<html><!-- SPRITE NAV NOT WORKING NOR WITH HTML5 OR HTML4 DOCTYPE DECLARATION -->
 		<head>
 			<meta charset=utf-8 />
 			<title>Rocking Layout</title>
 			<link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
 			<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+			
 		</head>
 		<body>
-			
+			<div id="container">
+				<div id="header">
+					<h1><a href="#">WebsiteName</a></h1>
+					<ul id="nav">
+						<li class="selected" id="home"><a href="#">Home</a></li>
+						<li id="about"><a href="#">About</a></li>
+						<li id="portfolio"><a href="#">Portfolio</a></li>
+						<li id="contact"><a href="#">Contact</a></li>
+					</ul>
+				</div><!-- header -->
+				
+				<div id="featured">
+					<h2>We make design that rocks!</h2>
+					<div id="slideControls">
+						<!-- TODO -->
+					</div>
+				</div><!-- featured -->
+				
+				<div id="content">
+					<div id="col1">
+						<h3>Welcome to Our Site</h3>
+						<p id="strong"><strong>So you want us to ROCK you!?</strong></p>
+						<p id="welcome">Etiam lectus nulla, vestibulum vel luctus eu, ultricies sit amet arcu. Sem a nibh fringilla blandit. Ut ut metus ut turpis ultricies ullamcorper. Here are some of our <a href="#">rockin’</a> services:<p>
+							
+						<div class="service graphic">
+							<h4>Graphic Design</h4>
+							<p>Etiam lectus nulla, vestibulum vel luctus eu, ultricid sit amet arcu. Awesome graphic designs!</p>
+						</div>
+						
+						<div class="service photography">
+							<h4>Photography</h4>
+							<p>Etiam lectus nulla, vestibulum vel luctus eu, ultricid sit amet arcu. Some text about Photography.</p>
+						</div>
+						
+						<div class="service web">
+							<h4>Web Design</h4>
+							<p>Etiam lectus nulla, vestibulum vel luctus eu, ultricid sit amet arcu. Websites that ROCKS!!!</p>
+						</div>
+					</div><!-- col1 -->
+					
+					<div id="col2">
+						<h3>Our Latest Work</h3>
+						<p id="strong"><strong>Watch us ROCKIN' the world!!</strong></p>
+						<div id="work">
+							<ul>
+								<li class="selected"><a href="#">Graphics</a></li>
+								<li><a href="#">Web</a></li>
+								<li><a href="#">Photography</a></li>
+								<li><a href="#">Print</a></li>
+							</ul>
+						</div>
+						
+						<div id="samples">
+							<ul>
+								<li><a href="#"><img src="img/img1.jpg" alt="img1" width="204" height="56"/></a></li>
+								<li class="right"><a href="#"><img src="img/img2.jpg" alt="img2" width="204" height="56"/></a></li>
+								<li><a href="#"><img src="img/img3.jpg" alt="img3" width="204" height="54"/></a></li>
+								<li class="right"><a href="#"><img src="img/img4.jpg" alt="img4" width="204" height="54"/></a></li>
+							</ul>
+						</div>
+						
+						<div class="subColLeft">
+							<h4>Interesting?</h4>
+							<p>Liked our work!, we’re available for freelance.</p>
+							<p><a href="#" id="hireUsButton">Hire us</a></p>
+						</div>
+						
+						<div class="subColRight">
+							<h4>See more?</h4>
+							<p>What you’ve seen was just some samples.</p>
+							<p><a href="#" id="seeMoreButton">See more</a></p>
+						</div>
+					</div><!-- col2 -->
+				</div><!-- content -->
+				
+				<div id="footer">
+					<div class="box">
+						<h4>Testimonials</h4>
+						<p id="subHeading">See what our clients sayin’</p>
+						<p>Lorem ipsum dolor sit am. Well, this guy is simply awesome!</p>
+						<p id="button"><a href="#">Read more</a></p>
+					</div>
+					
+					<div class="box">
+						<h4>The blog</h4>
+						<p id="subHeading">Latest posts in our blog</p>
+						<p><span id="time">01.02.2009</span><br />
+							Lorem ipsum dolot sit am Simply a blog pos here</p>
+						<p id="button"><a href="#">Read more</a></p>
+					</div>
+					
+					<div class="box">
+						<h4>Twitter</h4>
+						<p id="subHeading">Our latest micro message</p>
+						<p>RT @Mkhaled1 Check out my latest tutorial!.<br />
+						<span id="time">10 hours ago from <a href="#">Web</a><span></p>
+						<p id="button"><a href="#">Follow us</a></p>
+					</div>
+				</div><!-- footer -->
+				
+				<div id="bottom">
+					<ul>
+						<li class="selected"><a href="#">Home</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Portfolio</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+					
+					<p>Copyright - <a href="#">WebsiteName</a> - All rights reserved</p>
+				</div><!-- bottom -->
+				
+			</div><!-- container -->
 		</body>
 	</html>
