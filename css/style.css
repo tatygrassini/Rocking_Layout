@@ -63,11 +63,11 @@ html {
 			}
 		
 			#portfolio a:hover {
-				background: url(../img/nav.jpg) -193 -89px no-repeat;
+				background: url(../img/nav.jpg) -193px -89px no-repeat;
 			}
 		
 			#contact a:hover {
-				background: url(../img/nav.jpg) -334 -89px no-repeat;
+				background: url(../img/nav.jpg) -334px -89px no-repeat;
 			}
 
 /* ------------------------- FEATURED AREA ------------------------- */
