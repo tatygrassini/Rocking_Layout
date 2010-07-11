@@ -265,22 +265,22 @@ html {
 	
 		.box p {
 			color: #c27819;
-			margin: 16px 0 20px;
+			margin-top: 16px;
 			padding: 0 21px 0 52px;
 		}
 	
 			.box p#button {
-				display: block;
-				width: 222px;
-				height: 40px;
-				padding-left: 83px;
-				margin-top: 20px;
+				background: transparent url("../img/footerButton-bg.jpg") no-repeat scroll 26px 0;
+				height: 39px;
 			}
 	
 				.box p#button a {
 					color: #2f1c16;
 					text-transform: uppercase;
 					text-decoration: none;
+					display: block;
+					height: 39px;
+					padding: 10px 0 0 46px;
 				}
 	
 		.box span {
