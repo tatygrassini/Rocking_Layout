@@ -12,7 +12,8 @@ the copyright statement in `sifr.js` is kept intact.
 // Make an object pointing to the location of the Flash movie on your web server.
 // Try using the font name as the variable name, makes it easy to remember which
 // object you're using. As an example in this file, we'll use Futura.
-var rockwell = { src: '../rockwell.swf' };
+// var rockwell = { src: '../js/sIFR/rockwell.swf' };
+var rockwell = { src: '/Users/Taty/Sites/Rocking_Layout/rockwell.swf' };
 
 // Now you can set some configuration settings.
 // See also <http://wiki.novemberborn.net/sifr3/JavaScript+Configuration>.
@@ -51,6 +52,6 @@ sIFR.activate(rockwell);
 // of the entire Flash movie to be a light grey, and the `color` of the text to
 // be red. Read more about styling at <http://wiki.novemberborn.net/sifr3/Styling>.
 sIFR.replace(rockwell, {
-  selector: 'h3',
-  css: '.sIFR-root { background-color: #F9F9F9; color: #FF0000; }'
+  selector: 'h3.flash',
+  css: '.sIFR-root { background-color: #181818; color: #e18610; font-size: 30px; text-transform: uppercase; margin-bottom: 9px;}'
 });

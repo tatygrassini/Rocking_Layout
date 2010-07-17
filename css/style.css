@@ -154,13 +154,13 @@ html {
 				background: transparent url(../img/web-bg.jpg) no-repeat center top;
 			}
 
-		#col2 #work ul {
+		#col2 #work ul.tabs {
 			width: 440px;
 			height: 52px;
 			border-bottom: 3px solid #2d1a14;
 		}
 		
-		#col2 #work ul li {
+		#col2 #work ul.tabs li {
 			height: 52px;
 			list-style: none;
 			float: left;
@@ -173,32 +173,34 @@ html {
 			#col2 #work ul li a {
 				color: #e18610;
 				text-decoration: none;
+				display: block;
+				height: 100%;
 			}
 
 				#col2 #work ul li:first-child {
 					margin-left: 0;
 				}
 			
-				#col2 #work ul li.selected, #col2 #work ul li:hover {
-					background: url("../img/arrow.jpg") no-repeat scroll 50% 100% transparent
+				#col2 #work ul.tabs li.active, #col2 #work ul.tabs li:hover {
+					background: url("../img/arrow.jpg") no-repeat scroll 50% 100% transparent;
 				}
 
-			#col2 #samples ul {
+			#col2 #work .tab_content ul.samples {
 				display: block;
 				margin-top: 35px;
 			}
 			
-			#col2 #samples ul li {
+			#col2 #work .tab_content ul.samples li {
 				list-style: none;
 				float: left;
 				margin-bottom: 32px;
 			}
 			
-				#col2 #samples ul li.right {
+				#col2 #work .tab_content ul.samples li.right {
 					float: right;
 				}
 			
-				#col2 #samples img {
+				#col2 #work .tab_content img {
 					border: none;
 				}
 

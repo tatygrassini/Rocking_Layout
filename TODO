@@ -1,12 +1,5 @@
-1- "Read more" and "Follow us" buttons, split the box bg in two bg's, one for the box one for the button.
-DONE!
+- sIFR: google: sifr background style transparent
 
-2- CSS file todo: is there any special selector for the strong tag?
-DONE!
+- sIFR: google: sifr config path to swf file
 
-3- Index file todo: Google "Sprite nav error doctype firefox"
-DONE!
-
-4- jQuery featured area animation
-
-5- jQuery "Our Latest Work" content box... GRAPHICS... WEB... etc 
+- jQuery featured area animation
