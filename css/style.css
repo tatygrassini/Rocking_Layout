@@ -54,7 +54,7 @@ html {
 			height: 89px;
 		}
 	
-			#home a:hover/*, ul#nav li.selected*/ {
+			#home a:hover, ul#nav li.selected {
 				background: url(../img/nav.jpg) 0 -89px no-repeat;
 			}
 		
@@ -158,6 +158,7 @@ html {
 			width: 440px;
 			height: 52px;
 			border-bottom: 3px solid #2d1a14;
+			margin-bottom: 35px;
 		}
 		
 		#col2 #work ul.tabs li {
@@ -187,13 +188,11 @@ html {
 
 			#col2 #work .tab_content ul.samples {
 				display: block;
-				margin-top: 35px;
 			}
 			
 			#col2 #work .tab_content ul.samples li {
 				list-style: none;
 				float: left;
-				margin-bottom: 32px;
 			}
 			
 				#col2 #work .tab_content ul.samples li.right {
@@ -207,11 +206,13 @@ html {
 		.subColLeft {
 			width: 204px;
 			float: left;
+			margin-top: 32px;
 		}
 		
 		.subColRight {
 			width: 204px;
 			float: right;
+			margin-top: 32px;
 		}
 		
 			#hireUsButton {
