@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset=utf-8 />
+<title>Keyboard Navigation</title>
+<style>
+
+
+.coda-slider-wrapper {margin: 18px auto; width: 900px; background: url('../images/preview-border.png') no-repeat top;}
+.coda-slider { margin-bottom: 4px; }
+.title {display: none;}
+        
+/* Use this to keep the slider content contained in a box even when JavaScript is disabled */
+.coda-slider-no-js .coda-slider { height: 246px; overflow: auto !important; }
+        
+/* Change the width of the entire slider (without dynamic arrows) */
+.coda-slider, .coda-slider .panel { width: 900px; }
+        
+/* Tab nav */
+.coda-nav ul li a.current { background: url('../images/nav-on.png') no-repeat center; }
+        
+/* Panel padding */
+.coda-slider .panel-wrapper {}
+        
+/* Preloader */
+.coda-slider p.loading { padding: 20px; text-align: center }
+
+/* Don't change anything below here unless you know what you're doing */
+
+/* Tabbed nav */
+.coda-nav ul { clear: both; display: block; overflow: hidden; width: 80px; padding: 0; margin: 0px auto; margin-bottom: 23px;}
+.coda-nav ul li { display: inline-block; margin: 0; padding: 0; text-align: center;}
+.coda-nav ul li a { display: block; float: left; height: 12px; width: 12px; }
+        
+/* Miscellaneous */
+.coda-slider-wrapper { clear: both; overflow: auto }
+.coda-slider { float: left; overflow: hidden; position: relative }
+.coda-slider .panel { display: block; float: left }
+.coda-slider .panel-container { position: relative }
+.coda-nav-left, .coda-nav-right { float: left }
+.coda-nav-left a, .coda-nav-right a { display: block; text-align: center; text-decoration: none; }
+
+
+.coda-slider-wrapper a {
+  margin: 5px;
+  text-decoration: none;
+  color: #999;
+}
+
+.coda-slider-wrapper a:hover {
+  color: #666;
+}
+
+.coda-slider-wrapper a.current {
+  color: #000;
+}
+</style>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/niall-coda-slider.js"></script>
+
+<script>
+$(document).ready(function () {
+  $('#coda-slider-1').codaSlider();
+  
+  $('body').keyup(function (event) {
+    var direction = null;
+
+    // handle cursor keys
+    if (event.keyCode == 37) {
+      // slide left
+      direction = 'prev';
+    } else if (event.keyCode == 39) {
+      // slide right
+      direction = 'next';
+    }
+
+    if (direction != null) {
+      $('ul a.current').parent()[direction]().find('a').click();
+    }
+  });
+});
+</script>
+</head>
+<body>
+    <h1>Keyboard Navigation</h1>
+    <div class="coda-slider-wrapper">
+      <div class="coda-slider preload" id="coda-slider-1">
+                        <div class="panel">
+                                <div class="panel-wrapper">
+                                        <h2 class="title">1</h2> 
+                                        <img src="img/featured-slide1.png" width="900" height="246" alt="Featured Slide1">
+                                </div>
+                        </div>
+                        <div class="panel">
+                                <div class="panel-wrapper">
+                                        <h2 class="title">2</h2>
+            <img src="img/featured-slide1.png" width="900" height="246" alt="Featured Slide1">
+                                </div>
+                        </div>
+                        <div class="panel">
+                                <div class="panel-wrapper">
+                                        <h2 class="title">3</h2>
+           <img src="img/featured-slide1.png" width="900" height="246" alt="Featured Slide1">
+                                </div>
+                        </div>
+                        <div class="panel">
+                                <div class="panel-wrapper">
+                                        <h2 class="title">4</h2>
+            <img src="img/featured-slide1.png" width="900" height="246" alt="Featured Slide1">
+                                </div>
+                        </div>
+                        <div class="panel">
+                                <div class="panel-wrapper">
+                                        <h2 class="title">5</h2>
+            <img src="img/featured-slide1.png" width="900" height="246" alt="Featured Slide1">
+                                </div>
+                        </div>
+                </div>
+                </div>
+</body>
+</html>
