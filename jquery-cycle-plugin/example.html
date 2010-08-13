@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<title>JQuery Cycle Plugin - 'goto' Demo 2 (aka: Poor Man's pager)</title>
+<link rel="stylesheet" type="text/css" media="screen" href="../jq.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="cycle.css" />
+<style type="text/css">
+#main { background: #fff; margin: 0 20px 20px 20px }
+#main h1 { padding:0; margin-top: 20px }
+#header { background-color: #eee; font-weight: normal; margin:0; padding:10px; font-size: small }
+td { width: 350px }
+</style>
+<script type="text/javascript" src="js/jquery.min.js">></script>
+<script type="text/javascript" src="js/chili-1.7.pack.js"></script>
+<script type="text/javascript" src="js/jquery.cycle.all.2.72.js"></script>
+<script type="text/javascript">
+$(function() {
+    var bc = $('#buttonContainer');
+
+    var $container = $('#container').cycle({
+        fx: 'scrollHorz',
+        speed: 300,
+        timeout: 2000
+    });
+
+    $container.children().each(function(i) {
+        $('<input type="button" value="'+(i+1)+'" />')
+            .appendTo(bc).click(function() {
+                $container.cycle(i);
+                return false;
+            });
+    });
+
+});
+</script>
+</head>
+<body>
+<div id="main">
+<div id="demos">
+
+    <div id="buttonContainer"></div>
+    </td><td>
+        <div id="container" class="pics">
+            <img src="img/beach1.jpg" width="200" height="200" />
+            <img src="img/beach2.jpg" width="200" height="200" />
+            <img src="img/beach3.jpg" width="200" height="200" />
+            <img src="img/beach4.jpg" width="200" height="200" />
+            <img src="img/beach5.jpg" width="200" height="200" />
+        </div>
+
+</div>
+</div>
+
+</body>
+</html>
