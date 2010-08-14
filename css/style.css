@@ -7,6 +7,10 @@ html {
 	background-color: #E18610;
 }
 
+a {
+   outline: none;
+}
+
 #container {
 	width: 1020px;
 	margin: 0 auto;
