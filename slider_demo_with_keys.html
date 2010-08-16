@@ -42,17 +42,32 @@
 
 
 .coda-slider-wrapper a {
-  margin: 5px;
+  margin-right: 5px;
   text-decoration: none;
   color: #999;
 }
 
-.coda-slider-wrapper a:hover {
-  color: #666;
+
+
+ul {
+  background-color: black;
+  height: 20px;
 }
 
-.coda-slider-wrapper a.current {
-  color: #000;
+ul li {
+
+}
+
+ul li a {
+  text-decoration: none;
+}
+
+.coda-nav ul li a.current, .coda-nav ul li a:hover {
+  background: url('img/circle-hover.gif') no-repeat scroll 0 0 transparent;
+  height: 20px;
+  width: 20px;
+  display: block;
+  
 }
 </style>
 
@@ -84,7 +99,6 @@ $(document).ready(function () {
 </script>
 </head>
 <body>
-    <h1>Keyboard Navigation</h1>
     <div class="coda-slider-wrapper">
       <div class="coda-slider preload" id="coda-slider-1">
                         <div class="panel">
@@ -96,28 +110,28 @@ $(document).ready(function () {
                         <div class="panel">
                                 <div class="panel-wrapper">
                                         <h2 class="title">2</h2>
-            <img src="img/featured-slide1.png" width="900" height="246" alt="Featured Slide1">
+            														<img src="img/featured-slide1.png" width="900" height="246" alt="Featured Slide1">
                                 </div>
                         </div>
                         <div class="panel">
                                 <div class="panel-wrapper">
                                         <h2 class="title">3</h2>
-           <img src="img/featured-slide1.png" width="900" height="246" alt="Featured Slide1">
+           															<img src="img/featured-slide1.png" width="900" height="246" alt="Featured Slide1">
                                 </div>
                         </div>
                         <div class="panel">
                                 <div class="panel-wrapper">
                                         <h2 class="title">4</h2>
-            <img src="img/featured-slide1.png" width="900" height="246" alt="Featured Slide1">
+            														<img src="img/featured-slide1.png" width="900" height="246" alt="Featured Slide1">
                                 </div>
                         </div>
                         <div class="panel">
                                 <div class="panel-wrapper">
                                         <h2 class="title">5</h2>
-            <img src="img/featured-slide1.png" width="900" height="246" alt="Featured Slide1">
+            														<img src="img/featured-slide1.png" width="900" height="246" alt="Featured Slide1">
                                 </div>
                         </div>
-                </div>
-                </div>
+				</div><!-- .coda-slider preload -->
+		</div><!-- .coda-slider-wrapper -->
 </body>
 </html>

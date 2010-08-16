@@ -8,7 +8,7 @@ html {
 }
 
 a {
-   outline: none;
+   outline: none; /*this little piece of code here fixed the Firefox dotted outline on link-images (thanx Chris Coyler for this one)*/
 }
 
 #container {
@@ -92,7 +92,40 @@ a {
 		top: 51px;
 		left: 61px;
 	}
+	
+		#featured ul#circleNav {
+			position: absolute;
+			bottom: 13px;
+			left: 73px;
+			height: 20px;
+			width: 320px;
+		}
+		
+			#featured ul#circleNav li {
+				list-style: none;
+				display: inline;
+				margin-right: 28px;
+				height: 20px;
+				width: 20px;
+			}
+			
+		#featured ul#circleNav li a {
+				text-decoration: none;
+				height: 100%;
+				width: 100;
+			}	
+			
+			
+			
+				#featured ul#circleNav li.active, #featured ul#circleNav li:hover {
+					background: url('../img/circle-hover.gif') no-repeat scroll 0 0 transparent;
+					height: 20px;
+					width: 20px;
+					display: block;
+				}
 
+
+				
 /* ------------------------- CONTENT ------------------------- */
 
 #content {

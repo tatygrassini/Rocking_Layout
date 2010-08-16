@@ -36,6 +36,29 @@
 				});
 			</script>
 			
+			<script type="text/javascript">
+				$(document).ready(function() {
+
+					//When page loads...
+					$(".tab_content").hide(); //Hide all content
+					$("ul.tabs li:first").addClass("active").show(); //Activate first tab
+					$(".tab_content:first").show(); //Show first tab content
+			
+					//On Click Event
+					$("ul.tabs li").click(function() {
+			
+						$("ul.tabs li").removeClass("active"); //Remove any "active" class
+						$(this).addClass("active"); //Add "active" class to selected tab
+						$(".tab_content").hide(); //Hide all tab content
+			
+						var activeTab = $(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content
+						$(activeTab).fadeIn(); //Fade in the active ID content
+						return false;
+					});
+			
+				});
+			</script>
+			
 		</head>
 		<body>
 			<div id="container">
@@ -50,10 +73,34 @@
 				</div><!-- header -->
 				
 				<div id="featured">
-					<h2>We make design that rocks!</h2>
-					<div id="slideControls">
-						<!-- TODO -->
+					
+					<!--
+<ul id="circleNav" class="tabs">
+						<li><a href="#1"><span>1</span></a></li>
+						<li><a href="#2"><span>2</span></a></li>
+						<li><a href="#3"><span>3</span></a></li>
+						<li><a href="#4"><span>4</span></a></li>
+						<li><a href="#5"><span>5</span></a></li>
+					</ul>
+-->
+					
+					<div id="1" class="">
+						<h2>We make design that rocks!</h2>
 					</div>
+					<!--
+<div id="2" class="tab_content">
+						<h2>We make design that rocks!</h2>
+					</div>
+					<div id="3" class="tab_content">
+						<h2>We make design that rocks!</h2>
+					</div>
+					<div id="4" class="tab_content">
+						<h2>We make design that rocks!</h2>
+					</div>
+					<div id="5" class="tab_content">
+						<h2>We make design that rocks!</h2>
+					</div>
+-->
 				</div><!-- featured -->
 				
 				<div id="content">
