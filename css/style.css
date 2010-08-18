@@ -4,7 +4,7 @@
 }
 
 html {
-	background-color: #E18610;
+	background: #281501 url(../img/wood-texture.png) no-repeat center top;
 }
 
 a {
@@ -88,9 +88,7 @@ a {
 		text-indent: -9999px;
 		width: 900px;
 		height: 246px;
-		position: absolute;
-		top: 51px;
-		left: 61px;
+		position: absolute; top: 51px; left: 61px;
 	}
 	
 		#featured ul#circleNav {

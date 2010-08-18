@@ -4,50 +4,34 @@
 <meta charset=utf-8 />
 <title>Keyboard Navigation</title>
 <style>
-
-
-.coda-slider-wrapper {margin: 18px auto; width: 900px; background: url('../images/preview-border.png') no-repeat top;}
-.coda-slider { margin-bottom: 4px; }
-.title {display: none;}
+.coda-slider-wrapper {margin: 0px auto; width: 900px;}
         
 /* Use this to keep the slider content contained in a box even when JavaScript is disabled */
 .coda-slider-no-js .coda-slider { height: 246px; overflow: auto !important; }
         
 /* Change the width of the entire slider (without dynamic arrows) */
 .coda-slider, .coda-slider .panel { width: 900px; }
-        
-/* Tab nav */
-.coda-nav ul li a.current { background: url('../images/nav-on.png') no-repeat center; }
-        
-/* Panel padding */
-.coda-slider .panel-wrapper {}
-        
-/* Preloader */
-.coda-slider p.loading { padding: 20px; text-align: center }
+
 
 /* Don't change anything below here unless you know what you're doing */
 
 /* Tabbed nav */
-.coda-nav ul { clear: both; display: block; overflow: hidden; width: 80px; padding: 0; margin: 0px auto; margin-bottom: 23px;}
+.coda-nav ul { clear: both; display: block; overflow: hidden; width: 180px; padding: 0; margin: 0px auto;}
 .coda-nav ul li { display: inline-block; margin: 0; padding: 0; text-align: center;}
-.coda-nav ul li a { display: block; float: left; height: 12px; width: 12px; }
+.coda-nav ul li a { display: block; float: left; height: 20px; width: 20px; }
         
 /* Miscellaneous */
 .coda-slider-wrapper { clear: both; overflow: auto }
 .coda-slider { float: left; overflow: hidden; position: relative }
 .coda-slider .panel { display: block; float: left }
 .coda-slider .panel-container { position: relative }
-.coda-nav-left, .coda-nav-right { float: left }
-.coda-nav-left a, .coda-nav-right a { display: block; text-align: center; text-decoration: none; }
 
 
 .coda-slider-wrapper a {
-  margin-right: 5px;
+  margin-right: 25px;
   text-decoration: none;
   color: #999;
 }
-
-
 
 ul {
   background-color: black;
@@ -67,8 +51,12 @@ ul li a {
   height: 20px;
   width: 20px;
   display: block;
-  
 }
+
+a {
+   outline: none; /*this little piece of code here fixed the Firefox dotted outline on link-images (thanx Chris Coyler for this one)*/
+}
+
 </style>
 
 <script src="js/jquery.min.js"></script>
@@ -82,15 +70,6 @@ $(document).ready(function () {
   $('body').keyup(function (event) {
     var direction = null;
 
-    // handle cursor keys
-    if (event.keyCode == 37) {
-      // slide left
-      direction = 'prev';
-    } else if (event.keyCode == 39) {
-      // slide right
-      direction = 'next';
-    }
-
     if (direction != null) {
       $('ul a.current').parent()[direction]().find('a').click();
     }
@@ -101,36 +80,31 @@ $(document).ready(function () {
 <body>
     <div class="coda-slider-wrapper">
       <div class="coda-slider preload" id="coda-slider-1">
-                        <div class="panel">
-                                <div class="panel-wrapper">
-                                        <h2 class="title">1</h2> 
-                                        <img src="img/featured-slide1.png" width="900" height="246" alt="Featured Slide1">
-                                </div>
-                        </div>
-                        <div class="panel">
-                                <div class="panel-wrapper">
-                                        <h2 class="title">2</h2>
-            														<img src="img/featured-slide1.png" width="900" height="246" alt="Featured Slide1">
-                                </div>
-                        </div>
-                        <div class="panel">
-                                <div class="panel-wrapper">
-                                        <h2 class="title">3</h2>
-           															<img src="img/featured-slide1.png" width="900" height="246" alt="Featured Slide1">
-                                </div>
-                        </div>
-                        <div class="panel">
-                                <div class="panel-wrapper">
-                                        <h2 class="title">4</h2>
-            														<img src="img/featured-slide1.png" width="900" height="246" alt="Featured Slide1">
-                                </div>
-                        </div>
-                        <div class="panel">
-                                <div class="panel-wrapper">
-                                        <h2 class="title">5</h2>
-            														<img src="img/featured-slide1.png" width="900" height="246" alt="Featured Slide1">
-                                </div>
-                        </div>
+				<div class="panel">
+					<div class="panel-wrapper">
+						<img src="img/featured-slide1.png" width="900" height="246" alt="We make design that rocks!">
+					</div>
+				</div>
+				<div class="panel">
+					<div class="panel-wrapper">
+						<img src="img/featured-slide1.png" width="900" height="246" alt="We make design that rocks!">
+					</div>
+				</div>
+				<div class="panel">
+					<div class="panel-wrapper">
+						<img src="img/featured-slide1.png" width="900" height="246" alt="We make design that rocks!">
+					</div>
+				</div>
+				<div class="panel">
+					<div class="panel-wrapper">
+						<img src="img/featured-slide1.png" width="900" height="246" alt="We make design that rocks!">
+					</div>
+				</div>
+				<div class="panel">
+					<div class="panel-wrapper">
+						<img src="img/featured-slide1.png" width="900" height="246" alt="We make design that rocks!">
+					</div>
+				</div>
 				</div><!-- .coda-slider preload -->
 		</div><!-- .coda-slider-wrapper -->
 </body>

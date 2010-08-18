@@ -14,7 +14,7 @@ $.fn.codaSlider = function(settings) {
 		autoHeightEaseDuration: 1000,
 		autoHeightEaseFunction: "easeInOutExpo",
 		autoSlide: true,
-		autoSlideInterval: 7000,
+		autoSlideInterval: 2000,
 		autoSlideStopWhenClicked: true,
 		crossLinking: true,
 		dynamicArrows: false,
@@ -36,13 +36,6 @@ $.fn.codaSlider = function(settings) {
 		// alert("Testing preloader");
 		
 		var slider = $(this);
-		
-		// If we need arrows
-		if (settings.dynamicArrows) {
-			slider.parent().addClass("arrows");
-			slider.before('<div class="coda-nav-left" id="coda-nav-left-' + sliderCount + '"><a href="#">' + settings.dynamicArrowLeftText + '</a></div>');
-			slider.after('<div class="coda-nav-right" id="coda-nav-right-' + sliderCount + '"><a href="#">' + settings.dynamicArrowRightText + '</a></div>');
-		};
 		
 		var panelWidth = slider.find(".panel").width();
 		var panelCount = slider.find(".panel").size();
@@ -69,45 +62,7 @@ $.fn.codaSlider = function(settings) {
 		} else { 
 			var currentPanel = 1;
 		};
-			
-		// Left arrow click
-		$("#coda-nav-left-" + sliderCount + " a").click(function(){
-			navClicks++;
-			if (currentPanel == 1) {
-				offset = - (panelWidth*(panelCount - 1));
-				alterPanelHeight(panelCount - 1);
-				currentPanel = panelCount;
-				slider.siblings('.coda-nav').find('a.current').removeClass('current').parents('ul').find('li:last a').addClass('current');
-			} else {
-				currentPanel -= 1;
-				alterPanelHeight(currentPanel - 1);
-				offset = - (panelWidth*(currentPanel - 1));
-				slider.siblings('.coda-nav').find('a.current').removeClass('current').parent().prev().find('a').addClass('current');
-			};
-			$('.panel-container', slider).animate({ marginLeft: offset }, settings.slideEaseDuration, settings.slideEaseFunction);
-			if (settings.crossLinking) { location.hash = currentPanel }; // Change the URL hash (cross-linking)
-			return false;
-		});
-			
-		// Right arrow click
-		$('#coda-nav-right-' + sliderCount + ' a').click(function(){
-			navClicks++;
-			if (currentPanel == panelCount) {
-				offset = 0;
-				currentPanel = 1;
-				alterPanelHeight(0);
-				slider.siblings('.coda-nav').find('a.current').removeClass('current').parents('ul').find('a:eq(0)').addClass('current');
-			} else {
-				offset = - (panelWidth*currentPanel);
-				alterPanelHeight(currentPanel);
-				currentPanel += 1;
-				slider.siblings('.coda-nav').find('a.current').removeClass('current').parent().next().find('a').addClass('current');
-			};
-			$('.panel-container', slider).animate({ marginLeft: offset }, settings.slideEaseDuration, settings.slideEaseFunction);
-			if (settings.crossLinking) { location.hash = currentPanel }; // Change the URL hash (cross-linking)
-			return false;
-		});
-		
+
 		// If we need a dynamic menu
 		if (settings.dynamicTabs) {
 			var dynamicTabs = '<div class="coda-nav" id="coda-nav-' + sliderCount + '"><ul></ul></div>';
