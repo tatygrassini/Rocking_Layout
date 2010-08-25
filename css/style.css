@@ -76,57 +76,90 @@ a {
 
 /* ------------------------- FEATURED AREA ------------------------- */
 
-#featured {
-	clear: both;
-	position: relative;
-	background: url(../img/featured-bg.jpg) no-repeat 0 0;
-	height: 397px;
-}
 
-	#featured h2 {
-		background: url(../img/featured-slide1.png) no-repeat 0 0;
-		text-indent: -9999px;
-		width: 900px;
-		height: 246px;
-		position: absolute; top: 51px; left: 61px;
-	}
-	
-		#featured ul#circleNav {
-			position: absolute;
-			bottom: 13px;
-			left: 73px;
-			height: 20px;
-			width: 320px;
-		}
-		
-			#featured ul#circleNav li {
-				list-style: none;
-				display: inline;
-				margin-right: 28px;
-				height: 20px;
-				width: 20px;
-			}
-			
-		#featured ul#circleNav li a {
-				text-decoration: none;
-				height: 100%;
-				width: 100;
-			}	
-			
-			
-			
-				#featured ul#circleNav li.active, #featured ul#circleNav li:hover {
-					background: url('../img/circle-hover.gif') no-repeat scroll 0 0 transparent;
-					height: 20px;
-					width: 20px;
-					display: block;
-				}
+				/* Easy Slider */
+					
+
+					#featured {
+					clear: both;
+					position: relative;
+					background: url(../img/featured-bg.jpg) no-repeat 0 0;
+					width: 1020px;
+					height: 397px;
+					}
+					
+					#slider ul {
+						padding: 0;
+						width: 900px;
+						height: 397px;
+						}
+
+					#slider li {
+						list-style: none;
+						width: 900px;
+						height: 246px;
+						overflow: hidden;
+						
+						}	
+					
+					#slider img {
+						border: 0;
+					}
+
+
+					/* numeric controls */	
+
+					ol#controls{
+						position: absolute;
+						bottom: 14px;
+						left: 67px;
+						height: 20px;
+						}
+					ol#controls li{
+						padding:0;
+						float:left;
+						line-height:20px;
+						list-style: none;
+						display: inline;
+						margin-right: 20px;
+						height: 20px;
+						width: 20px;
+						text-indent: -9999px;
+						}
+					ol#controls li a{
+						float:left;
+						height:20px;
+						line-height:20px;
+						color:#555;
+						padding: 0px;
+						text-decoration:none;
+						}
+						
+					ol#controls li a {
+						text-decoration: none;
+						height: 100%;
+						width: 100%;
+					}
+					
+					ol#controls li.current a, ol#controls li a:hover{
+						background: url('../img/circle-hover.png') no-repeat scroll 0 0 transparent;
+						height: 20px;
+						width: 20px;
+						display: block;
+					}
+					
+					ol#controls li a:focus {
+						outline:none;
+					}
+
+				/* // Easy Slider */
 
 
 				
 /* ------------------------- CONTENT ------------------------- */
 
 #content {
+	clear: both;
 	padding-top: 50px;
 	background: #fff url(../img/content-bg.jpg) repeat-x top center;
 	font: 15px/18px Arial, Verdana, sans-serif;
@@ -366,3 +399,15 @@ a {
 		float: right;
 		margin-right: 37px;
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

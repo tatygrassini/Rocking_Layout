@@ -4,7 +4,6 @@
 			<meta charset=utf-8 />
 			<title>Rocking Layout</title>
 			<link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
-			<link rel="stylesheet" type="text/css" media="screen" href="css/coda-slider.css" />
 			
 			<!-- <link rel="stylesheet" type="text/css" media="screen" href="css/sifr.css" />
 			
@@ -20,6 +19,17 @@
 			<!-- DELETE THIS LINE ONCE YOU DONE -->
 			<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 			<!-- DELETE THIS LINE ONCE YOU DONE -->
+			
+			<script type="text/javascript" src="js/easySlider1.7.js"></script>
+			<script type="text/javascript">
+				$(document).ready(function(){	
+					$("#slider").easySlider({
+						auto: true, 
+						continuous: true,
+						numeric: true
+					});
+				});	
+			</script>
 			
 
 			
@@ -46,26 +56,6 @@
 				});
 			</script>
 			
-
-
-			<script src="js/jquery.min.js"></script>
-			<script src="js/jquery.easing.1.3.js"></script>
-			<script src="js/niall-coda-slider.js"></script>
-
-			<script>
-			$(document).ready(function () {
-			  $('#coda-slider-1').codaSlider();
-			  
-			  $('body').keyup(function (event) {
-				var direction = null;
-
-				if (direction != null) {
-				  $('ul a.current').parent()[direction]().find('a').click();
-				}
-			  });
-			});
-			</script>
-			
 		</head>
 		<body>
 			<div id="container">
@@ -79,41 +69,26 @@
 					</ul>
 				</div><!-- header -->
 				
-				<div class="coda-slider-wrapper">
-					<div class="coda-slider preload" id="coda-slider-1">
-						<div class="panel">
-							<div class="panel-wrapper">
-								<img src="img/featured-slide1.png" width="900" height="246" alt="We make design that rocks!">
-							</div>
-						</div>
-						<div class="panel">
-							<div class="panel-wrapper">
-								<img src="img/featured-slide1.png" width="900" height="246" alt="We make design that rocks!">
-							</div>
-						</div>
-						<div class="panel">
-							<div class="panel-wrapper">
-								<img src="img/featured-slide1.png" width="900" height="246" alt="We make design that rocks!">
-							</div>
-						</div>
-						<div class="panel">
-							<div class="panel-wrapper">
-								<img src="img/featured-slide1.png" width="900" height="246" alt="We make design that rocks!">
-							</div>
-						</div>
-						<div class="panel">
-							<div class="panel-wrapper">
-								<img src="img/featured-slide1.png" width="900" height="246" alt="We make design that rocks!">
-							</div>
-						</div>
-					</div><!-- .coda-slider preload -->
-				</div><!-- .coda-slider-wrapper -->
+				<div id="featured">
+				
+				<div id="slider">
+					<ul>
+						<li><a href="#"><img src="img/featured-slide1.png" width="900" height="246" alt="We make design that rocks!"></li>
+						<li><a href="#"><img src="img/featured-slide1.png" width="900" height="246" alt="We make design that rocks!"></li>
+						<li><a href="#"><img src="img/featured-slide1.png" width="900" height="246" alt="We make design that rocks!"></li>
+						<li><a href="#"><img src="img/featured-slide1.png" width="900" height="246" alt="We make design that rocks!"></li>
+						<li><a href="#"><img src="img/featured-slide1.png" width="900" height="246" alt="We make design that rocks!"></li>
+					</ul>
+				</div><!-- #slider -->
+					
+				</div><!-- #featured -->
 				
 				<div id="content">
+					
 					<div id="col1">
 						<h3>Welcome to Our Site</h3>
 						<p id="strong"><strong>So you want us to ROCK you!?</strong></p>
-						<p id="welcome">Etiam lectus nulla, vestibulum vel luctus eu, ultricies sit amet arcu. Sem a nibh fringilla blandit. Ut ut metus ut turpis ultricies ullamcorper. Here are some of our <a href="#">rockin’</a> services:<p>
+						<p id="welcome">Etiam lectus nulla, vestibulum vel luctus eu, ultricies sit amet arcu. Sem a nibh fringilla blandit. Ut ut metus ut turpis ultricies ullamcorper. Here are some of our <a href="#">rockin’</a> services:</p>
 							
 						<div class="service graphic">
 							<h4>Graphic Design</h4>
