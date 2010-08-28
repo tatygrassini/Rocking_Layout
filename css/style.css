@@ -74,11 +74,7 @@ a {
 				background: url(../img/nav.jpg) -334px -89px no-repeat;
 			}
 
-/* ------------------------- FEATURED AREA ------------------------- */
-
-
-				/* Easy Slider */
-					
+/* ------------------------- FEATURED AREA: Easy Slider plugin ------------------------- */
 
 					#featured {
 					clear: both;
@@ -86,20 +82,21 @@ a {
 					background: url(../img/featured-bg.jpg) no-repeat 0 0;
 					width: 1020px;
 					height: 397px;
+					padding-left: 55px; /* push img slide to the right */
 					}
 					
 					#slider ul {
-						padding: 0;
 						width: 900px;
 						height: 397px;
+						padding-top: 53px; /* push img slide to the bottom */
 						}
 
 					#slider li {
 						list-style: none;
 						width: 900px;
-						height: 246px;
+						height: 397px;
 						overflow: hidden;
-						
+						padding: 0;
 						}	
 					
 					#slider img {
@@ -152,10 +149,6 @@ a {
 						outline:none;
 					}
 
-				/* // Easy Slider */
-
-
-				
 /* ------------------------- CONTENT ------------------------- */
 
 #content {
@@ -399,15 +392,3 @@ a {
 		float: right;
 		margin-right: 37px;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
