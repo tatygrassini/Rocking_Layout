@@ -4,6 +4,7 @@
 			<meta charset=utf-8 />
 			<title>Rocking Layout</title>
 			<link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+			<!--[if lte IE 6]><link rel="stylesheet" type="text/css" media="screen" href="css/ie6.css" /> <![endif]-->
 			
 			<!-- <link rel="stylesheet" type="text/css" media="screen" href="css/sifr.css" />
 			
@@ -11,7 +12,17 @@
 			<script src="js/sIFR/sifr-debug.js" type="text/javascript" charset="utf-8"></script>
 			<script src="js/sIFR/sifr-config.js" type="text/javascript" charset="utf-8"></script> -->
 			
-			<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+			<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> -->
+			<script type="text/javascript" src="js/jquery.min.js"></script>
+			
+			<script type="text/javascript" src="js/pluginpage.js"></script>
+			<script type="text/javascript" src="js/jquery.pngFix.pack.js"></script>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$('div#selector').pngFix( );
+				});
+			</script>
+			
 			
 			<script type="text/javascript" src="js/easySlider1.7.js"></script>
 			<script type="text/javascript">
@@ -45,6 +56,8 @@
 				});
 			</script>
 			
+			
+			
 		</head>
 		<body>
 			<div id="container">
@@ -70,7 +83,7 @@
 					</div><!-- #slider -->
 				</div><!-- #featured -->
 				
-				<div id="content">
+				<div id="content" class="clearfix"><!-- IE -->
 					
 					<div id="col1">
 						<h3 class="RockwellStd">Welcome to Our Site</h3>
@@ -100,7 +113,7 @@
 						
 						<div id="work">
 							<ul class="tabs">
-								<li><a href="#graphics">Graphics</a></li>
+								<li class="first"><a href="#graphics">Graphics</a></li><!-- added class "first" for IE; not first-child pseudo-class twik yet -->
 								<li><a href="#web">Web</a></li>
 								<li><a href="#photography">Photography</a></li>
 								<li><a href="#print">Print</a></li>

@@ -152,7 +152,6 @@ a {
 /* ------------------------- CONTENT ------------------------- */
 
 #content {
-	clear: both;
 	padding-top: 50px;
 	background: #fff url(../img/content-bg.jpg) repeat-x top center;
 	font: 15px/18px Arial, Verdana, sans-serif;
@@ -161,7 +160,7 @@ a {
 }
 
 	#col1, #col2 {
-		margin-left: 36px;
+		padding-left: 36px;
 		float: left;
 		background-color: transparent;
 	}
@@ -206,7 +205,7 @@ a {
 				margin-bottom: 36px;
 			}
 			
-			a {
+			a:link, a:visited {
 				color: #a6620a;
 			}
 
@@ -243,19 +242,20 @@ a {
 			margin-left: 34px;
 		}
 		
-			#col2 #work ul li a {
+			#col2 #work ul.tabs li a {
 				color: #e18610;
 				text-decoration: none;
 				display: block;
-				height: 100%;
 			}
 
 				#col2 #work ul li:first-child {
 					margin-left: 0;
 				}
 			
-				#col2 #work ul.tabs li.active, #col2 #work ul.tabs li:hover {
-					background: url("../img/arrow.jpg") no-repeat scroll 50% 100% transparent;
+				#col2 #work ul.tabs li.active, 
+				#col2 #work ul.tabs li:hover {
+					border: 0;
+					background: url("../img/arrow.jpg") no-repeat scroll 50% 41px transparent;
 				}
 
 			#col2 #work .tab_content ul.samples {
@@ -308,7 +308,6 @@ a {
 /* ------------------------- FOOTER ------------------------- */
 
 #footer {
-	clear: both;
 	background: #2f1c16 url(../img/footer-bg.jpg) repeat-x center top;
 	padding-left: 3px;
 	height: 335px;
@@ -365,7 +364,6 @@ a {
 /* ------------------------- BOTTOM ------------------------- */
 
 #bottom {
-	clear: both;
 	padding-top: 50px;
 	background: transparent url(../img/bottom-bg.jpg) repeat-x 0 0;
 	height: 115px;
@@ -404,17 +402,4 @@ a {
 		margin-right: 37px;
 	}
 	
-	.clearfix:after {
-	     content: "."; 
-	     display: block; 
-	     height: 0; 
-	     clear: both; 
-	     visibility: hidden;
-	}
-
-	.clearfix {display: inline-block;}
-
-	/* Hides from IE-mac \*/
-	* html .clearfix {height: 1%;}
-	.clearfix {display: block;}
-	/* End hide from IE-mac */
+	

@@ -1,0 +1,53 @@
+.clearfix:after {
+	     content: "."; 
+	     display: block; 
+	     height: 0; 
+	     clear: both; 
+	     visibility: hidden;
+	}
+
+	.clearfix {display: inline-block;}
+
+	/* Hides from IE-mac \*/
+	* html .clearfix {height: 1%;}
+	.clearfix {display: block;}
+	/* End hide from IE-mac */
+	
+	
+body { font-size: 62.5% }
+
+/* grouping all IE doble margin bugs */
+#header h1 a, ul#nav, #footer .box, #bottom ul, #bottom p {
+	display: inline;
+}
+
+#content { 
+	line-height: 1.18em; 
+	height: auto !important;
+  height: 549px;
+}
+
+h3 { font-size: 1.88em; }
+			
+h4 { font-size: 1.56em; }
+
+.box h4 { font-size: 25px; } /* not working with em for IE */
+
+#col2 #work ul.tabs li.first { margin-left: 0; }
+
+#col2 #work ul.tabs li a:hover, #col2 #work ul.tabs li:hover {
+					display: inline-block !important;
+					height: 100%;
+					border: 0;
+					background: url("../img/arrow.jpg") no-repeat scroll 50% 41px transparent;
+				}
+				
+				
+
+#footer p { font: 0.94em; }
+
+.box p#subHeading { margin-top: -19px; }
+
+#bottom ul li.selected {
+				border-left: none;
+			}
