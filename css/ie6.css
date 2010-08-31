@@ -51,3 +51,5 @@ h4 { font-size: 1.56em; }
 #bottom ul li.selected {
 				border-left: none;
 			}
+			
+ol#controls { bottom: 13px; }
