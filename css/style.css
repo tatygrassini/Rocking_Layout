@@ -256,6 +256,7 @@ a {
 				#col2 #work ul.tabs li:hover {
 					border: 0;
 					background: url("../img/arrow.jpg") no-repeat scroll 50% 41px transparent;
+					cursor: pointer;
 				}
 
 			#col2 #work .tab_content ul.samples {

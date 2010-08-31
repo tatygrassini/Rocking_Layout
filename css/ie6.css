@@ -35,15 +35,6 @@ h4 { font-size: 1.56em; }
 
 #col2 #work ul.tabs li.first { margin-left: 0; }
 
-#col2 #work ul.tabs li a:hover, #col2 #work ul.tabs li:hover {
-					display: inline-block !important;
-					height: 100%;
-					border: 0;
-					background: url("../img/arrow.jpg") no-repeat scroll 50% 41px transparent;
-				}
-				
-				
-
 #footer p { font: 0.94em; }
 
 .box p#subHeading { margin-top: -19px; }
