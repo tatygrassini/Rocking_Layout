@@ -4,11 +4,11 @@
 }
 
 html {
-	background: #281501 url(../img/wood-texture.png) no-repeat center top;
+	background: #281501 url(../img/wood-texture.jpg) no-repeat center top;
 }
 
 a {
-   outline: none; /*this little piece of code here fixed the Firefox dotted outline on link-images (thanx Chris Coyler for this one)*/
+   outline: none; /* Firefox dotted outline on link-images fix (thanx Chris Coyler for this one) */
 }
 
 #container {
@@ -20,10 +20,10 @@ a {
 
 #header {
 	background: transparent url(../img/header-bg.jpg) repeat-x 0 0;
-	height: 104px;		/* had to increase header-bg img because featured bg img was overlapping the hover effect in the nav */
+	height: 104px;		/* had to increase header-bg img height because featured bg img was overlapping the hover effect in the sprite nav */
 }
 
-	#header h1 a{
+	#header h1 a {
 		display: block;
 		float: left;
 		background: url(../img/logo.jpg) no-repeat 0 0;
@@ -155,7 +155,7 @@ a {
 	padding-top: 50px;
 	background: #fff url(../img/content-bg.jpg) repeat-x top center;
 	font: 15px/18px Arial, Verdana, sans-serif;
-	color: ##2d1a14;
+	color: #2d1a14;
 	min-height: 549px;
 }
 
