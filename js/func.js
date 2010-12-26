@@ -31,5 +31,4 @@
 
 // --------- Cufon
 
-Cufon.replace('h3');
-Cufon.replace('h4');
+Cufon.replace('h3, h4');

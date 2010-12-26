@@ -1,50 +1,23 @@
-.clearfix:after {
-	     content: "."; 
-	     display: block; 
-	     height: 0; 
-	     clear: both; 
-	     visibility: hidden;
-	}
-
-	.clearfix {display: inline-block;}
-
-	/* Hides from IE-mac \*/
-	* html .clearfix {height: 1%;}
-	.clearfix {display: block;}
-	/* End hide from IE-mac */
-	
-	
-body { font-size: 62.5% }
-
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{display:inline-block;}
+/* Hides from IE-mac \*/
+* html .clearfix{height:1%;}
+.clearfix{display:block;}
+/* End hide from IE-mac */
+body{font-size:62.5%}
 /* grouping all IE doble margin bugs */
-#header h1 a, ul#nav, #footer .box, #bottom ul, #bottom p {
-	display: inline;
-}
-
-#content { 
-	line-height: 1.18em; 
-	height: auto !important;
-  height: 549px;
-}
-
-h3 { font-size: 1.88em; }
-			
-h4 { font-size: 1.56em; }
-
-.box h4 { font-size: 25px; } /* not working with em for IE */
-
-#col2 #work ul.tabs li.first { margin-left: 0; }
-
-#footer p { font: 0.94em; }
-
-.box p#subHeading { margin-top: -19px; }
-
-#bottom ul li.selected { border-left: none; }
-			
-ol#controls { bottom: 13px; }
-
-img, ol#controls li.current a, 
-ol#controls li a:hover { behavior: url(css/iepngfix.htc); }
-
-#col2 #work ul.tabs li.active, 
-#col2 #work ul.tabs li:hover {behavior: url(css/csshover3.htc);}
+#header h1 a,ul#nav,#footer .box,#bottom ul,#bottom p{display:inline;}
+#content{line-height:1.18em;height:auto !important;height:549px;}
+h3{font-size:1.88em;}
+h4{font-size:1.56em;}
+.box h4{font-size:25px;}
+/* not working with em for IE */
+#col2 #work ul.tabs li.first{margin-left:0;}
+#footer p{font:0.94em;}
+.box p#subHeading{margin-top:-19px;}
+#bottom ul li.selected{border-left:none;}
+ol#controls{bottom:13px;}
+img,ol#controls li.current a,
+ol#controls li a:hover{behavior:url(css/iepngfix.htc);}
+#col2 #work ul.tabs li.active,
+#col2 #work ul.tabs li:hover{behavior:url(css/csshover3.htc);}

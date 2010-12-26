@@ -1,395 +1,77 @@
-* {
-	margin: 0;
-	padding: 0;
-}
-
-html {
-	background: #281501 url(../img/wood-texture.jpg) no-repeat center top;
-}
-
-a {
-   outline: none; /* Firefox dotted outline on link-images fix (thanx Chris Coyier for this one) */
-}
-
-#container {
-	width: 1020px;
-	margin: 0 auto;
-}
-
+*{margin:0;padding:0;}
+html{background:#281501 url(../img/wood-texture.jpg) no-repeat center top;}
+a{outline:none;/* Firefox dotted outline on link-images fix (thanx Chris Coyier for this one) */}
+#container{width:1020px;margin:0 auto;}
 /* ------------------------- HEADER ------------------------- */
-
-#header {
-	background: transparent url(../img/header-bg.jpg) repeat-x 0 0;
-	height: 104px;		/* had to increase header-bg img height because featured bg img was overlapping the hover effect in the sprite nav */
-}
-
-	#header h1 a {
-		display: block;
-		float: left;
-		background: url(../img/logo.jpg) no-repeat 0 0;
-		width: 257px;
-		height: 71px;
-		text-indent: -9999px;
-		margin: 2px 0 0 38px;
-	}
-	
-	ul#nav {
-		display: block;
-		float: right;
-		width: 444px;
-		height: 89px;
-		background: url(../img/nav.jpg) no-repeat 0 0;
-		margin: 15px 35px -3px 0;
-	}
-	
-	ul#nav li {
-		list-style: none;
-		float: left;
-		text-indent: -9999px;
-	}
-	
-		#home { width: 92px; }
-		#about { width: 101px; }
-		#portfolio { width: 141px; }
-		#contact { width: 110px; }
-		
-		ul#nav li a {
-			display: block;
-			height: 89px;
-		}
-	
-			#home a:hover, ul#nav li.selected {
-				background: url(../img/nav.jpg) 0 -89px no-repeat;
-			}
-		
-			#about a:hover {
-				background: url(../img/nav.jpg) -92px -89px no-repeat;
-			}
-		
-			#portfolio a:hover {
-				background: url(../img/nav.jpg) -193px -89px no-repeat;
-			}
-		
-			#contact a:hover {
-				background: url(../img/nav.jpg) -334px -89px no-repeat;
-			}
-
-/* ------------------------- FEATURED AREA: Easy Slider plugin ------------------------- */
-
-					#featured {
-					clear: both;
-					position: relative;
-					background: url(../img/featured-bg.jpg) no-repeat 0 0;
-					width: 1020px;
-					height: 397px;
-					padding-left: 55px; /* push img slide to the right */
-					}
-					
-					#slider ul {
-						width: 900px;
-						height: 397px;
-						padding-top: 53px; /* push img slide to the bottom */
-						}
-
-					#slider li {
-						list-style: none;
-						width: 900px;
-						height: 397px;
-						overflow: hidden;
-						padding: 0;
-						}	
-					
-					#slider img {
-						border: 0;
-					}
-
-
-					/* numeric controls */	
-
-					ol#controls{
-						position: absolute;
-						bottom: 14px;
-						left: 67px;
-						height: 20px;
-						}
-					ol#controls li{
-						padding:0;
-						float:left;
-						line-height:20px;
-						list-style: none;
-						display: inline;
-						margin-right: 20px;
-						height: 20px;
-						width: 20px;
-						text-indent: -9999px;
-						}
-					ol#controls li a{
-						float:left;
-						height:20px;
-						line-height:20px;
-						color:#555;
-						padding: 0px;
-						text-decoration:none;
-						}
-						
-					ol#controls li a {
-						text-decoration: none;
-						height: 100%;
-						width: 100%;
-					}
-					
-					ol#controls li.current a, ol#controls li a:hover{
-						background: url('../img/circle-hover.gif') no-repeat scroll 0 0 transparent;
-						height: 20px;
-						width: 20px;
-						display: block;
-					}
-					
-					ol#controls li a:focus {
-						outline:none;
-					}
-
+#header{background:transparent url(../img/header-bg.jpg) repeat-x 0 0;height:104px;/* had to increase header-bg img height because featured bg img was overlapping the hover effect in the sprite nav */}
+#header h1 a{display:block;float:left;background:url(../img/logo.jpg) no-repeat 0 0;width:257px;height:71px;text-indent:-9999px;margin:2px 0 0 38px;}
+ul#nav{display:block;float:right;width:444px;height:89px;background:url(../img/nav.jpg) no-repeat 0 0;margin:15px 35px -3px 0;}
+ul#nav li{list-style:none;float:left;text-indent:-9999px;}
+#home{width:92px;}
+#about{width:101px;}
+#portfolio{width:141px;}
+#contact{width:110px;}
+ul#nav li a{display:block;height:89px;}
+#home a:hover,ul#nav li.selected{background:url(../img/nav.jpg) 0 -89px no-repeat;}
+#about a:hover{background:url(../img/nav.jpg) -92px -89px no-repeat;}
+#portfolio a:hover{background:url(../img/nav.jpg) -193px -89px no-repeat;}
+#contact a:hover{background:url(../img/nav.jpg) -334px -89px no-repeat;}
+/* ------------------------- FEATURED AREA:Easy Slider plugin ------------------------- */
+#featured{clear:both;position:relative;background:url(../img/featured-bg.jpg) no-repeat 0 0;width:1020px;height:397px;padding-left:55px;/* push img slide to the right */}
+#slider ul{width:900px;height:397px;padding-top:53px;/* push img slide to the bottom */}
+#slider li{list-style:none;width:900px;height:397px;overflow:hidden;padding:0;}
+#slider img{border:0;}
+/* numeric controls */ 
+ol#controls{position:absolute;bottom:14px;left:67px;height:20px;}
+ol#controls li{padding:0;float:left;line-height:20px;list-style:none;display:inline;margin-right:20px;height:20px;width:20px;text-indent:-9999px;}
+ol#controls li a{float:left;height:20px;line-height:20px;color:#555;padding:0px;text-decoration:none;}
+ol#controls li a{text-decoration:none;height:100%;width:100%;}
+ol#controls li.current a,ol#controls li a:hover{background:url('../img/circle-hover.gif') no-repeat scroll 0 0 transparent;height:20px;width:20px;display:block;}
+ol#controls li a:focus{outline:none;}
 /* ------------------------- CONTENT ------------------------- */
-
-#content {
-	padding-top: 50px;
-	background: #fff url(../img/content-bg.jpg) repeat-x top center;
-	font: 15px/18px Arial, Verdana, sans-serif;
-	color: #2d1a14;
-	min-height: 549px;
-}
-
-	#col1, #col2 {
-		padding-left: 36px;
-		float: left;
-		background-color: transparent;
-	}
-	
-		#col1 { width: 480px; }
-		
-		#col2 { width: 440px; }
-	
-			h3, h4 {
-				font-weight: normal;
-				color: #e18610;
-			}
-			
-			h3 {
-				font-size: 30px;
-				text-transform: uppercase;
-				margin-bottom: 9px;
-			}
-			
-			
-			h4 {
-				font-size: 25px;
-				margin-bottom: 14px;
-			}
-			
-			p#strong {
-				margin-bottom: 18px;		/* is there any special selector for the strong tag?  */
-			}
-			
-			p#welcome {
-				margin-bottom: 36px;
-			}
-			
-			a:link, a:visited {
-				color: #a6620a;
-			}
-
-		#col1 .service {
-			padding: 18px 5px 17px 110px;
-		}
-		
-			.graphic {
-				background: transparent url(../img/graphic-bg.jpg) no-repeat center top;
-			}
-			
-			.photography {
-				background: transparent url(../img/photography-bg.jpg) no-repeat center top;
-			}
-			
-			.web {
-				background: transparent url(../img/web-bg.jpg) no-repeat center top;
-			}
-
-		#col2 #work ul.tabs {
-			width: 440px;
-			height: 52px;
-			border-bottom: 3px solid #2d1a14;
-			margin-bottom: 35px;
-		}
-		
-		#col2 #work ul.tabs li {
-			height: 52px;
-			list-style: none;
-			float: left;
-			display: inline;
-			text-transform: uppercase;
-			letter-spacing: 2.4px;
-			margin-left: 34px;
-		}
-		
-			#col2 #work ul.tabs li a {
-				color: #e18610;
-				text-decoration: none;
-				display: block;
-			}
-
-				#col2 #work ul li:first-child {
-					margin-left: 0;
-				}
-			
-				#col2 #work ul.tabs li.active, 
-				#col2 #work ul.tabs li:hover {
-					border: 0;
-					background: url("../img/arrow.jpg") no-repeat scroll 50% 41px transparent;
-					cursor: pointer;
-				}
-
-			#col2 #work .tab_content ul.samples {
-				display: block;
-			}
-			
-			#col2 #work .tab_content ul.samples li {
-				list-style: none;
-				float: left;
-			}
-			
-				#col2 #work .tab_content ul.samples li.right {
-					float: right;
-				}
-			
-				#col2 #work .tab_content img {
-					border: none;
-				}
-
-		.subColLeft {
-			width: 204px;
-			float: left;
-			margin-top: 32px;
-		}
-		
-		.subColRight {
-			width: 204px;
-			float: right;
-			margin-top: 32px;
-		}
-		
-			#hireUsButton {
-				display: block;
-				background: url(../img/hireUsButton.gif) no-repeat;
-				width: 170px;
-				height: 44px;
-				text-indent: -9999px;
-				margin-top: 26px;
-			}
-			
-			#seeMoreButton {
-				display: block;
-				background: url(../img/seeMoreButton.gif) no-repeat;
-				width: 170px;
-				height: 44px;
-				text-indent: -9999px;
-				margin-top: 26px;
-			}
-
+#content{padding-top:50px;background:#fff url(../img/content-bg.jpg) repeat-x top center;font:15px/18px Arial,Verdana,sans-serif;color:#2d1a14;min-height:549px;}
+#col1,#col2{padding-left:36px;float:left;background-color:transparent;}
+#col1{width:480px;}
+#col2{width:440px;}
+h3,h4{font-weight:normal;color:#e18610;}
+h3{font-size:30px;text-transform:uppercase;margin-bottom:9px;}
+h4{font-size:25px;margin-bottom:14px;}
+p#strong{margin-bottom:18px;/* is there any special selector for the strong tag? */}
+p#welcome{margin-bottom:36px;}
+a:link,a:visited{color:#a6620a;}
+#col1 .service{padding:18px 5px 17px 110px;}
+.graphic{background:transparent url(../img/graphic-bg.jpg) no-repeat center top;}
+.photography{background:transparent url(../img/photography-bg.jpg) no-repeat center top;}
+.web{background:transparent url(../img/web-bg.jpg) no-repeat center top;}
+#col2 #work ul.tabs{width:440px;height:52px;border-bottom:3px solid #2d1a14;margin-bottom:35px;}
+#col2 #work ul.tabs li{height:52px;list-style:none;float:left;display:inline;text-transform:uppercase;letter-spacing:2.4px;margin-left:34px;}
+#col2 #work ul.tabs li a{color:#e18610;text-decoration:none;display:block;}
+#col2 #work ul li:first-child{margin-left:0;}
+#col2 #work ul.tabs li.active,
+#col2 #work ul.tabs li:hover{border:0;background:url("../img/arrow.jpg") no-repeat scroll 50% 41px transparent;cursor:pointer;}
+#col2 #work .tab_content ul.samples{display:block;}
+#col2 #work .tab_content ul.samples li{list-style:none;float:left;}
+#col2 #work .tab_content ul.samples li.right{float:right;}
+#col2 #work .tab_content img{border:none;}
+.subColLeft{width:204px;float:left;margin-top:32px;}
+.subColRight{width:204px;float:right;margin-top:32px;}
+#hireUsButton{display:block;background:url(../img/hireUsButton.gif) no-repeat;width:170px;height:44px;text-indent:-9999px;margin-top:26px;}
+#seeMoreButton{display:block;background:url(../img/seeMoreButton.gif) no-repeat;width:170px;height:44px;text-indent:-9999px;margin-top:26px;}
 /* ------------------------- FOOTER ------------------------- */
-
-#footer {
-	background: #2f1c16 url(../img/footer-bg.jpg) repeat-x center top;
-	padding-left: 3px;
-	height: 335px;
-}
-
-	#footer p {
-		font: 15px Arial, Verdana, sans-serif;
-	}
-	
-	#footer .box {
-		margin-top: 50px;
-		width: 272px;
-		height: 238px;
-		background: #6b3d0c url(../img/box.jpg) no-repeat;
-		float: left;
-		margin-left: 49px;
-	}
-	
-		.box h4 {
-			color: #fcf6c4;
-			padding: 18px 0 0 52px;
-		}
-	
-		.box p#subHeading {
-			color: #fcf6c4;
-			margin-top: -21px;
-			padding-left: 52px;
-		}
-	
-		.box p {
-			color: #c27819;
-			margin-top: 16px;
-			padding: 0 21px 0 52px;
-		}
-	
-			.box p#button {
-				background: transparent url("../img/footerButton-bg.jpg") no-repeat scroll 26px 0;
-				height: 39px;
-			}
-	
-				.box p#button a {
-					color: #2f1c16;
-					text-transform: uppercase;
-					text-decoration: none;
-					display: block;
-					height: 39px;
-					padding: 10px 0 0 46px;
-				}
-	
-		.box span {
-			font-style: italic;
-		}
-
+#footer{background:#2f1c16 url(../img/footer-bg.jpg) repeat-x center top;padding-left:3px;height:335px;}
+#footer p{font:15px Arial,Verdana,sans-serif;}
+#footer .box{margin-top:50px;width:272px;height:238px;background:#6b3d0c url(../img/box.jpg) no-repeat;float:left;margin-left:49px;}
+.box h4{color:#fcf6c4;padding:18px 0 0 52px;}
+.box p#subHeading{color:#fcf6c4;margin-top:-21px;padding-left:52px;}
+.box p{color:#c27819;margin-top:16px;padding:0 21px 0 52px;}
+.box p#button{background:transparent url("../img/footerButton-bg.jpg") no-repeat scroll 26px 0;height:39px;}
+.box p#button a{color:#2f1c16;text-transform:uppercase;text-decoration:none;display:block;height:39px;padding:10px 0 0 46px;}
+.box span{font-style:italic;}
 /* ------------------------- BOTTOM ------------------------- */
-
-#bottom {
-	padding-top: 50px;
-	background: transparent url(../img/bottom-bg.jpg) repeat-x 0 0;
-	height: 115px;
-	font: 15px Arial, Verdana, sans-serif;
-	color: #2f1c16;
-}
-
-	#bottom ul {
-		float: left;
-		margin-left: 37px;
-	}
-	
-		#bottom ul li {
-			list-style: none;
-			float: left;
-			margin-left: 10px;
-			padding-left: 10px;
-			border-left: 1px solid #c27819;
-		}
-		
-			#bottom ul li.selected a {
-				color: #2f1c16;
-			}
-			
-				#bottom ul li:first-child {
-					border-left: none;
-				}
-			
-			#bottom ul li a, #bottom a {
-				color: #c27819;
-				text-decoration: none;
-			}
-
-	#bottom p {
-		float: right;
-		margin-right: 37px;
-	}
-	
-	
+#bottom{padding-top:50px;background:transparent url(../img/bottom-bg.jpg) repeat-x 0 0;height:115px;font:15px Arial,Verdana,sans-serif;color:#2f1c16;}
+#bottom ul{float:left;margin-left:37px;}
+#bottom ul li{list-style:none;float:left;margin-left:10px;padding-left:10px;border-left:1px solid #c27819;}
+#bottom ul li.selected a{color:#2f1c16;}
+#bottom ul li:first-child{border-left:none;}
+#bottom ul li a,#bottom a{color:#c27819;text-decoration:none;}
+#bottom p{float:right;margin-right:37px;}

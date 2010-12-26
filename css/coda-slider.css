@@ -1,45 +1,19 @@
-.coda-slider-wrapper {margin: 0px auto; width: 1020px;}
-		
+.coda-slider-wrapper{margin:0px auto;width:1020px;}
 /* Use this to keep the slider content contained in a box even when JavaScript is disabled */
-.coda-slider-no-js .coda-slider { height: 246px; overflow: auto !important; }
-		
+.coda-slider-no-js .coda-slider{height:246px;overflow:auto !important;}
 /* Change the width of the entire slider (without dynamic arrows) */
-.coda-slider, .coda-slider .panel { width: 900px; }
-
-
-
+.coda-slider,.coda-slider .panel{width:900px;}
 /* Don't change anything below here unless you know what you're doing */
-
 /* Tabbed nav */
-.coda-nav ul { clear: both; display: block; overflow: hidden; width: 180px; padding: 0; margin-left: 67px; padding-top: 60px;}
-.coda-nav ul li { display: inline-block; margin: 0; padding: 0; text-align: center;}
-.coda-nav ul li a { display: block; float: left; height: 20px; width: 20px; }
-		
+.coda-nav ul{clear:both;display:block;overflow:hidden;width:180px;padding:0;margin-left:67px;padding-top:60px;}
+.coda-nav ul li{display:inline-block;margin:0;padding:0;text-align:center;}
+.coda-nav ul li a{display:block;float:left;height:20px;width:20px;}
 /* Miscellaneous */
-.coda-slider-wrapper { clear: both; overflow: auto; background: url(../img/featured-bg.jpg) no-repeat 0 0; height: 397px; }
-.coda-slider { float: left; overflow: hidden; position: relative; margin-left: 61px; margin-top: 51px; }
-.coda-slider .panel { display: block; float: left }
-.coda-slider .panel-container { position: relative }
-
-
-.coda-slider-wrapper a {
-  margin-right: 20px;
-  text-decoration: none;
-  color: #999;
-}
-
-.coda-nav ul {
-  height: 20px;
-}
-
-
-.coda-nav ul li a.current, .coda-nav ul li a:hover {
-  background: url(../img/circle-hover.png) no-repeat scroll 0 0 transparent;
-  height: 20px;
-  width: 20px;
-  display: block;
-}
-
-a {
-   outline: none; /*this little piece of code here fixed the Firefox dotted outline on link-images (thanx Chris Coyler for this one)*/
-}
+.coda-slider-wrapper{clear:both;overflow:auto;background:url(../img/featured-bg.jpg) no-repeat 0 0;height:397px;}
+.coda-slider{float:left;overflow:hidden;position:relative;margin-left:61px;margin-top:51px;}
+.coda-slider .panel{display:block;float:left}
+.coda-slider .panel-container{position:relative}
+.coda-slider-wrapper a{margin-right:20px;text-decoration:none;color:#999;}
+.coda-nav ul{height:20px;}
+.coda-nav ul li a.current,.coda-nav ul li a:hover{background:url(../img/circle-hover.png) no-repeat scroll 0 0 transparent;height:20px;width:20px;display:block;}
+a{outline:none;/*this little piece of code here fixed the Firefox dotted outline on link-images (thanx Chris Coyler for this one)*/}
