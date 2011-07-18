@@ -1,1 +1,566 @@
-My GitHub Page
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset=utf-8 />
+			<title>Rocking Layout</title>
+			<style>
+				*{margin:0;padding:0;}
+				html{background:#281501 url(https://github.com/tatygrassini/Rocking_Layout/raw/master/img/wood-texture.jpg) no-repeat center top;}
+				a{outline:none;/* Firefox dotted outline on link-images fix (thanx Chris Coyier for this one) */}
+				#container{width:1020px;margin:0 auto;}
+				/* ------------------------- HEADER ------------------------- */
+				#header{background:transparent url(https://github.com/tatygrassini/Rocking_Layout/raw/master/img/header-bg.jpg) repeat-x 0 0;height:104px;/* had to increase header-bg img height because featured bg img was overlapping the hover effect in the sprite nav */}
+				#header h1 a{display:block;float:left;background:url(https://github.com/tatygrassini/Rocking_Layout/raw/master/img/logo.jpg) no-repeat 0 0;width:257px;height:71px;text-indent:-9999px;margin:2px 0 0 38px;}
+				ul#nav{display:block;float:right;width:444px;height:89px;background:url(https://github.com/tatygrassini/Rocking_Layout/raw/master/img/nav.jpg) no-repeat 0 0;margin:15px 35px -3px 0;}
+				ul#nav li{list-style:none;float:left;text-indent:-9999px;}
+				#home{width:92px;}
+				#about{width:101px;}
+				#portfolio{width:141px;}
+				#contact{width:110px;}
+				ul#nav li a{display:block;height:89px;}
+				#home a:hover,ul#nav li.selected{background:url(https://github.com/tatygrassini/Rocking_Layout/raw/master/img/nav.jpg) 0 -89px no-repeat;}
+				#about a:hover{background:url(https://github.com/tatygrassini/Rocking_Layout/raw/master/img/nav.jpg) -92px -89px no-repeat;}
+				#portfolio a:hover{background:url(https://github.com/tatygrassini/Rocking_Layout/raw/master/img/nav.jpg) -193px -89px no-repeat;}
+				#contact a:hover{background:url(https://github.com/tatygrassini/Rocking_Layout/raw/master/img/nav.jpg) -334px -89px no-repeat;}
+				/* ------------------------- FEATURED AREA:Easy Slider plugin ------------------------- */
+				#featured{clear:both;position:relative;background:url(https://github.com/tatygrassini/Rocking_Layout/raw/master/img/featured-bg.jpg) no-repeat 0 0;width:1020px;height:397px;padding-left:55px;/* push img slide to the right */}
+				#slider ul{width:900px;height:397px;padding-top:53px;/* push img slide to the bottom */}
+				#slider li{list-style:none;width:900px;height:397px;overflow:hidden;padding:0;}
+				#slider img{border:0;}
+				/* numeric controls */ 
+				ol#controls{position:absolute;bottom:14px;left:67px;height:20px;}
+				ol#controls li{padding:0;float:left;line-height:20px;list-style:none;display:inline;margin-right:20px;height:20px;width:20px;text-indent:-9999px;}
+				ol#controls li a{float:left;height:20px;line-height:20px;color:#555;padding:0px;text-decoration:none;}
+				ol#controls li a{text-decoration:none;height:100%;width:100%;}
+				ol#controls li.current a,ol#controls li a:hover{background:url('../img/circle-hover.gif') no-repeat scroll 0 0 transparent;height:20px;width:20px;display:block;}
+				ol#controls li a:focus{outline:none;}
+				/* ------------------------- CONTENT ------------------------- */
+				#content{padding-top:50px;background:#fff url(https://github.com/tatygrassini/Rocking_Layout/raw/master/img/content-bg.jpg) repeat-x top center;font:15px/18px Arial,Verdana,sans-serif;color:#2d1a14;min-height:549px;}
+				#col1,#col2{padding-left:36px;float:left;background-color:transparent;}
+				#col1{width:480px;}
+				#col2{width:440px;}
+				h3,h4{font-weight:normal;color:#e18610;}
+				h3{font-size:30px;text-transform:uppercase;margin-bottom:9px;}
+				h4{font-size:25px;margin-bottom:14px;}
+				p#strong{margin-bottom:18px;/* is there any special selector for the strong tag? */}
+				p#welcome{margin-bottom:36px;}
+				a:link,a:visited{color:#a6620a;}
+				#col1 .service{padding:18px 5px 17px 110px;}
+				.graphic{background:transparent url(https://github.com/tatygrassini/Rocking_Layout/raw/master/img/graphic-bg.jpg) no-repeat center top;}
+				.photography{background:transparent url(https://github.com/tatygrassini/Rocking_Layout/raw/master/img/photography-bg.jpg) no-repeat center top;}
+				.web{background:transparent url(https://github.com/tatygrassini/Rocking_Layout/raw/master/img/web-bg.jpg) no-repeat center top;}
+				#col2 #work ul.tabs{width:440px;height:52px;border-bottom:3px solid #2d1a14;margin-bottom:35px;}
+				#col2 #work ul.tabs li{height:52px;list-style:none;float:left;display:inline;text-transform:uppercase;letter-spacing:2.4px;margin-left:34px;}
+				#col2 #work ul.tabs li a{color:#e18610;text-decoration:none;display:block;}
+				#col2 #work ul li:first-child{margin-left:0;}
+				#col2 #work ul.tabs li.active,
+				#col2 #work ul.tabs li:hover{border:0;background:url("../img/arrow.jpg") no-repeat scroll 50% 41px transparent;cursor:pointer;}
+				#col2 #work .tab_content ul.samples{display:block;}
+				#col2 #work .tab_content ul.samples li{list-style:none;float:left;}
+				#col2 #work .tab_content ul.samples li.right{float:right;}
+				#col2 #work .tab_content img{border:none;}
+				.subColLeft{width:204px;float:left;margin-top:32px;}
+				.subColRight{width:204px;float:right;margin-top:32px;}
+				#hireUsButton{display:block;background:url(https://github.com/tatygrassini/Rocking_Layout/raw/master/img/hireUsButton.gif) no-repeat;width:170px;height:44px;text-indent:-9999px;margin-top:26px;}
+				#seeMoreButton{display:block;background:url(https://github.com/tatygrassini/Rocking_Layout/raw/master/img/seeMoreButton.gif) no-repeat;width:170px;height:44px;text-indent:-9999px;margin-top:26px;}
+				/* ------------------------- FOOTER ------------------------- */
+				#footer{background:#2f1c16 url(https://github.com/tatygrassini/Rocking_Layout/raw/master/img/footer-bg.jpg) repeat-x center top;padding-left:3px;height:335px;}
+				#footer p{font:15px Arial,Verdana,sans-serif;}
+				#footer .box{margin-top:50px;width:272px;height:238px;background:#6b3d0c url(https://github.com/tatygrassini/Rocking_Layout/raw/master/img/box.jpg) no-repeat;float:left;margin-left:49px;}
+				.box h4{color:#fcf6c4;padding:18px 0 0 52px;}
+				.box p#subHeading{color:#fcf6c4;margin-top:-21px;padding-left:52px;}
+				.box p{color:#c27819;margin-top:16px;padding:0 21px 0 52px;}
+				.box p#button{background:transparent url("../img/footerButton-bg.jpg") no-repeat scroll 26px 0;height:39px;}
+				.box p#button a{color:#2f1c16;text-transform:uppercase;text-decoration:none;display:block;height:39px;padding:10px 0 0 46px;}
+				.box span{font-style:italic;}
+				/* ------------------------- BOTTOM ------------------------- */
+				#bottom{padding-top:50px;background:transparent url(https://github.com/tatygrassini/Rocking_Layout/raw/master/img/bottom-bg.jpg) repeat-x 0 0;height:115px;font:15px Arial,Verdana,sans-serif;color:#2f1c16;}
+				#bottom ul{float:left;margin-left:37px;}
+				#bottom ul li{list-style:none;float:left;margin-left:10px;padding-left:10px;border-left:1px solid #c27819;}
+				#bottom ul li.selected a{color:#2f1c16;}
+				#bottom ul li:first-child{border-left:none;}
+				#bottom ul li a,#bottom a{color:#c27819;text-decoration:none;}
+				#bottom p{float:right;margin-right:37px;}
+			</style>
+			
+			<!--[if lte IE 6]>
+				<style>
+					.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+					.clearfix{display:inline-block;}
+					/* Hides from IE-mac \*/
+					* html .clearfix{height:1%;}
+					.clearfix{display:block;}
+					/* End hide from IE-mac */
+					body{font-size:62.5%}
+					/* grouping all IE doble margin bugs */
+					#header h1 a,ul#nav,#footer .box,#bottom ul,#bottom p{display:inline;}
+					#content{line-height:1.18em;height:auto !important;height:549px;}
+					h3{font-size:1.88em;}
+					h4{font-size:1.56em;}
+					.box h4{font-size:25px;}
+					/* not working with em for IE */
+					#col2 #work ul.tabs li.first{margin-left:0;}
+					#footer p{font:0.94em;}
+					.box p#subHeading{margin-top:-19px;}
+					#bottom ul li.selected{border-left:none;}
+					ol#controls{bottom:13px;}
+					img,ol#controls li.current a,
+					ol#controls li a:hover{behavior:url(https://raw.github.com/tatygrassini/Rocking_Layout/master/css/iepngfix.htc);}
+					#col2 #work ul.tabs li.active,
+					#col2 #work ul.tabs li:hover{behavior:url(https://raw.github.com/tatygrassini/Rocking_Layout/master/css/csshover3.htc);}
+				</style>
+			<![endif]-->
+			
+			<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+			
+			<script>
+				/*
+				 * 	Easy Slider 1.7 - jQuery plugin
+				 *	written by Alen Grakalic	
+				 *	http://cssglobe.com/post/4004/easy-slider-15-the-easiest-jquery-plugin-for-sliding
+				 *
+				 *	Copyright (c) 2009 Alen Grakalic (http://cssglobe.com)
+				 *	Dual licensed under the MIT (MIT-LICENSE.txt)
+				 *	and GPL (GPL-LICENSE.txt) licenses.
+				 *
+				 *	Built for jQuery library
+				 *	http://jquery.com
+				 *
+				 */
+
+(function($) {
+
+    $.fn.easySlider = function(options) {
+
+        // default configuration properties
+        var defaults = {
+            prevId: 'prevBtn',
+            prevText: 'Previous',
+            nextId: 'nextBtn',
+            nextText: 'Next',
+            controlsShow: true,
+            controlsBefore: '',
+            controlsAfter: '',
+            controlsFade: true,
+            firstId: 'firstBtn',
+            firstText: 'First',
+            firstShow: false,
+            lastId: 'lastBtn',
+            lastText: 'Last',
+            lastShow: false,
+            vertical: false,
+            speed: 800,
+            auto: false,
+            pause: 2000,
+            continuous: false,
+            numeric: false,
+            numericId: 'controls'
+        };
+
+        var options = $.extend(defaults, options);
+
+        this.each(function() {
+            var obj = $(this);
+            var s = $("li", obj).length;
+            var w = $("li", obj).width();
+            var h = $("li", obj).height();
+            var clickable = true;
+            obj.width(w);
+            obj.height(h);
+            obj.css("overflow", "hidden");
+            var ts = s - 1;
+            var t = 0;
+            $("ul", obj).css('width', s * w);
+
+            if (options.continuous) {
+                $("ul", obj).prepend($("ul li:last-child", obj).clone().css("margin-left", "-" + w + "px"));
+                $("ul", obj).append($("ul li:nth-child(2)", obj).clone());
+                $("ul", obj).css('width', (s + 1) * w);
+            };
+
+            if (!options.vertical) $("li", obj).css('float', 'left');
+
+            if (options.controlsShow) {
+                var html = options.controlsBefore;
+                if (options.numeric) {
+                    html += '<ol id="' + options.numericId + '"></ol>';
+                } else {
+                    if (options.firstShow) html += '<span id="' + options.firstId + '"><a href=\"javascript:void(0);\">' + options.firstText + '</a></span>';
+                    html += ' <span id="' + options.prevId + '"><a href=\"javascript:void(0);\">' + options.prevText + '</a></span>';
+                    html += ' <span id="' + options.nextId + '"><a href=\"javascript:void(0);\">' + options.nextText + '</a></span>';
+                    if (options.lastShow) html += ' <span id="' + options.lastId + '"><a href=\"javascript:void(0);\">' + options.lastText + '</a></span>';
+                };
+
+                html += options.controlsAfter;
+                $(obj).after(html);
+            };
+
+            if (options.numeric) {
+                for (var i = 0; i < s; i++) {
+                    $(document.createElement("li"))
+                    .attr('id', options.numericId + (i + 1))
+                    .html('<a rel=' + i + ' href=\"javascript:void(0);\">' + (i + 1) + '</a>')
+                    .appendTo($("#" + options.numericId))
+                    .click(function() {
+                        animate($("a", $(this)).attr('rel'), true);
+                    });
+                };
+            } else {
+                $("a", "#" + options.nextId).click(function() {
+                    animate("next", true);
+                });
+                $("a", "#" + options.prevId).click(function() {
+                    animate("prev", true);
+                });
+                $("a", "#" + options.firstId).click(function() {
+                    animate("first", true);
+                });
+                $("a", "#" + options.lastId).click(function() {
+                    animate("last", true);
+                });
+            };
+
+            function setCurrent(i) {
+                i = parseInt(i) + 1;
+                $("li", "#" + options.numericId).removeClass("current");
+                $("li#" + options.numericId + i).addClass("current");
+            };
+
+            function adjust() {
+                if (t > ts) t = 0;
+                if (t < 0) t = ts;
+                if (!options.vertical) {
+                    $("ul", obj).css("margin-left", (t * w * -1));
+                } else {
+                    $("ul", obj).css("margin-left", (t * h * -1));
+                }
+                clickable = true;
+                if (options.numeric) setCurrent(t);
+            };
+
+            function animate(dir, clicked) {
+                if (clickable) {
+                    clickable = false;
+                    var ot = t;
+                    switch (dir) {
+                    case "next":
+                        t = (ot >= ts) ? (options.continuous ? t + 1: ts) : t + 1;
+                        break;
+                    case "prev":
+                        t = (t <= 0) ? (options.continuous ? t - 1: 0) : t - 1;
+                        break;
+                    case "first":
+                        t = 0;
+                        break;
+                    case "last":
+                        t = ts;
+                        break;
+                    default:
+                        t = dir;
+                        break;
+                    };
+                    var diff = Math.abs(ot - t);
+                    var speed = diff * options.speed;
+                    if (!options.vertical) {
+                        p = (t * w * -1);
+                        $("ul", obj).animate(
+                        {
+                            marginLeft: p
+                        },
+                        {
+                            queue: false,
+                            duration: speed,
+                            complete: adjust
+                        }
+                        );
+                    } else {
+                        p = (t * h * -1);
+                        $("ul", obj).animate(
+                        {
+                            marginTop: p
+                        },
+                        {
+                            queue: false,
+                            duration: speed,
+                            complete: adjust
+                        }
+                        );
+                    };
+
+                    if (!options.continuous && options.controlsFade) {
+                        if (t == ts) {
+                            $("a", "#" + options.nextId).hide();
+                            $("a", "#" + options.lastId).hide();
+                        } else {
+                            $("a", "#" + options.nextId).show();
+                            $("a", "#" + options.lastId).show();
+                        };
+                        if (t == 0) {
+                            $("a", "#" + options.prevId).hide();
+                            $("a", "#" + options.firstId).hide();
+                        } else {
+                            $("a", "#" + options.prevId).show();
+                            $("a", "#" + options.firstId).show();
+                        };
+                    };
+
+                    if (clicked) clearTimeout(timeout);
+                    if (options.auto && dir == "next" && !clicked) {;
+                        timeout = setTimeout(function() {
+                            animate("next", false);
+                        },
+                        diff * options.speed + options.pause);
+                    };
+
+                };
+
+            };
+            // init
+            var timeout;
+            if (options.auto) {;
+                timeout = setTimeout(function() {
+                    animate("next", false);
+                },
+                options.pause);
+            };
+
+            if (options.numeric) setCurrent(0);
+
+            if (!options.continuous && options.controlsFade) {
+                $("a", "#" + options.prevId).hide();
+                $("a", "#" + options.firstId).hide();
+            };
+
+        });
+
+    };
+
+})(jQuery);
+			</script>
+			
+			<script>
+				/*
+				 * Copyright (c) 2009 Simo Kinnunen.
+				 * Licensed under the MIT license.
+				 *
+				 * @version 1.09
+				 */
+				var Cufon=(function(){var m=function(){return m.replace.apply(null,arguments)};var x=m.DOM={ready:(function(){var C=false,E={loaded:1,complete:1};var B=[],D=function(){if(C){return}C=true;for(var F;F=B.shift();F()){}};if(document.addEventListener){document.addEventListener("DOMContentLoaded",D,false);window.addEventListener("pageshow",D,false)}if(!window.opera&&document.readyState){(function(){E[document.readyState]?D():setTimeout(arguments.callee,10)})()}if(document.readyState&&document.createStyleSheet){(function(){try{document.body.doScroll("left");D()}catch(F){setTimeout(arguments.callee,1)}})()}q(window,"load",D);return function(F){if(!arguments.length){D()}else{C?F():B.push(F)}}})(),root:function(){return document.documentElement||document.body}};var n=m.CSS={Size:function(C,B){this.value=parseFloat(C);this.unit=String(C).match(/[a-z%]*$/)[0]||"px";this.convert=function(D){return D/B*this.value};this.convertFrom=function(D){return D/this.value*B};this.toString=function(){return this.value+this.unit}},addClass:function(C,B){var D=C.className;C.className=D+(D&&" ")+B;return C},color:j(function(C){var B={};B.color=C.replace(/^rgba\((.*?),\s*([\d.]+)\)/,function(E,D,F){B.opacity=parseFloat(F);return"rgb("+D+")"});return B}),fontStretch:j(function(B){if(typeof B=="number"){return B}if(/%$/.test(B)){return parseFloat(B)/100}return{"ultra-condensed":0.5,"extra-condensed":0.625,condensed:0.75,"semi-condensed":0.875,"semi-expanded":1.125,expanded:1.25,"extra-expanded":1.5,"ultra-expanded":2}[B]||1}),getStyle:function(C){var B=document.defaultView;if(B&&B.getComputedStyle){return new a(B.getComputedStyle(C,null))}if(C.currentStyle){return new a(C.currentStyle)}return new a(C.style)},gradient:j(function(F){var G={id:F,type:F.match(/^-([a-z]+)-gradient\(/)[1],stops:[]},C=F.substr(F.indexOf("(")).match(/([\d.]+=)?(#[a-f0-9]+|[a-z]+\(.*?\)|[a-z]+)/ig);for(var E=0,B=C.length,D;E<B;++E){D=C[E].split("=",2).reverse();G.stops.push([D[1]||E/(B-1),D[0]])}return G}),quotedList:j(function(E){var D=[],C=/\s*((["'])([\s\S]*?[^\\])\2|[^,]+)\s*/g,B;while(B=C.exec(E)){D.push(B[3]||B[1])}return D}),recognizesMedia:j(function(G){var E=document.createElement("style"),D,C,B;E.type="text/css";E.media=G;try{E.appendChild(document.createTextNode("/**/"))}catch(F){}C=g("head")[0];C.insertBefore(E,C.firstChild);D=(E.sheet||E.styleSheet);B=D&&!D.disabled;C.removeChild(E);return B}),removeClass:function(D,C){var B=RegExp("(?:^|\\s+)"+C+"(?=\\s|$)","g");D.className=D.className.replace(B,"");return D},supports:function(D,C){var B=document.createElement("span").style;if(B[D]===undefined){return false}B[D]=C;return B[D]===C},textAlign:function(E,D,B,C){if(D.get("textAlign")=="right"){if(B>0){E=" "+E}}else{if(B<C-1){E+=" "}}return E},textShadow:j(function(F){if(F=="none"){return null}var E=[],G={},B,C=0;var D=/(#[a-f0-9]+|[a-z]+\(.*?\)|[a-z]+)|(-?[\d.]+[a-z%]*)|,/ig;while(B=D.exec(F)){if(B[0]==","){E.push(G);G={};C=0}else{if(B[1]){G.color=B[1]}else{G[["offX","offY","blur"][C++]]=B[2]}}}E.push(G);return E}),textTransform:(function(){var B={uppercase:function(C){return C.toUpperCase()},lowercase:function(C){return C.toLowerCase()},capitalize:function(C){return C.replace(/\b./g,function(D){return D.toUpperCase()})}};return function(E,D){var C=B[D.get("textTransform")];return C?C(E):E}})(),whiteSpace:(function(){var D={inline:1,"inline-block":1,"run-in":1};var C=/^\s+/,B=/\s+$/;return function(H,F,G,E){if(E){if(E.nodeName.toLowerCase()=="br"){H=H.replace(C,"")}}if(D[F.get("display")]){return H}if(!G.previousSibling){H=H.replace(C,"")}if(!G.nextSibling){H=H.replace(B,"")}return H}})()};n.ready=(function(){var B=!n.recognizesMedia("all"),E=false;var D=[],H=function(){B=true;for(var K;K=D.shift();K()){}};var I=g("link"),J=g("style");function C(K){return K.disabled||G(K.sheet,K.media||"screen")}function G(M,P){if(!n.recognizesMedia(P||"all")){return true}if(!M||M.disabled){return false}try{var Q=M.cssRules,O;if(Q){search:for(var L=0,K=Q.length;O=Q[L],L<K;++L){switch(O.type){case 2:break;case 3:if(!G(O.styleSheet,O.media.mediaText)){return false}break;default:break search}}}}catch(N){}return true}function F(){if(document.createStyleSheet){return true}var L,K;for(K=0;L=I[K];++K){if(L.rel.toLowerCase()=="stylesheet"&&!C(L)){return false}}for(K=0;L=J[K];++K){if(!C(L)){return false}}return true}x.ready(function(){if(!E){E=n.getStyle(document.body).isUsable()}if(B||(E&&F())){H()}else{setTimeout(arguments.callee,10)}});return function(K){if(B){K()}else{D.push(K)}}})();function s(D){var C=this.face=D.face,B={"\u0020":1,"\u00a0":1,"\u3000":1};this.glyphs=D.glyphs;this.w=D.w;this.baseSize=parseInt(C["units-per-em"],10);this.family=C["font-family"].toLowerCase();this.weight=C["font-weight"];this.style=C["font-style"]||"normal";this.viewBox=(function(){var F=C.bbox.split(/\s+/);var E={minX:parseInt(F[0],10),minY:parseInt(F[1],10),maxX:parseInt(F[2],10),maxY:parseInt(F[3],10)};E.width=E.maxX-E.minX;E.height=E.maxY-E.minY;E.toString=function(){return[this.minX,this.minY,this.width,this.height].join(" ")};return E})();this.ascent=-parseInt(C.ascent,10);this.descent=-parseInt(C.descent,10);this.height=-this.ascent+this.descent;this.spacing=function(L,N,E){var O=this.glyphs,M,K,G,P=[],F=0,J=-1,I=-1,H;while(H=L[++J]){M=O[H]||this.missingGlyph;if(!M){continue}if(K){F-=G=K[H]||0;P[I]-=G}F+=P[++I]=~~(M.w||this.w)+N+(B[H]?E:0);K=M.k}P.total=F;return P}}function f(){var C={},B={oblique:"italic",italic:"oblique"};this.add=function(D){(C[D.style]||(C[D.style]={}))[D.weight]=D};this.get=function(H,I){var G=C[H]||C[B[H]]||C.normal||C.italic||C.oblique;if(!G){return null}I={normal:400,bold:700}[I]||parseInt(I,10);if(G[I]){return G[I]}var E={1:1,99:0}[I%100],K=[],F,D;if(E===undefined){E=I>400}if(I==500){I=400}for(var J in G){if(!k(G,J)){continue}J=parseInt(J,10);if(!F||J<F){F=J}if(!D||J>D){D=J}K.push(J)}if(I<F){I=F}if(I>D){I=D}K.sort(function(M,L){return(E?(M>=I&&L>=I)?M<L:M>L:(M<=I&&L<=I)?M>L:M<L)?-1:1});return G[K[0]]}}function r(){function D(F,G){if(F.contains){return F.contains(G)}return F.compareDocumentPosition(G)&16}function B(G){var F=G.relatedTarget;if(!F||D(this,F)){return}C(this,G.type=="mouseover")}function E(F){C(this,F.type=="mouseenter")}function C(F,G){setTimeout(function(){var H=d.get(F).options;m.replace(F,G?h(H,H.hover):H,true)},10)}this.attach=function(F){if(F.onmouseenter===undefined){q(F,"mouseover",B);q(F,"mouseout",B)}else{q(F,"mouseenter",E);q(F,"mouseleave",E)}}}function u(){var C=[],D={};function B(H){var E=[],G;for(var F=0;G=H[F];++F){E[F]=C[D[G]]}return E}this.add=function(F,E){D[F]=C.push(E)-1};this.repeat=function(){var E=arguments.length?B(arguments):C,F;for(var G=0;F=E[G++];){m.replace(F[0],F[1],true)}}}function A(){var D={},B=0;function C(E){return E.cufid||(E.cufid=++B)}this.get=function(E){var F=C(E);return D[F]||(D[F]={})}}function a(B){var D={},C={};this.extend=function(E){for(var F in E){if(k(E,F)){D[F]=E[F]}}return this};this.get=function(E){return D[E]!=undefined?D[E]:B[E]};this.getSize=function(F,E){return C[F]||(C[F]=new n.Size(this.get(F),E))};this.isUsable=function(){return !!B}}function q(C,B,D){if(C.addEventListener){C.addEventListener(B,D,false)}else{if(C.attachEvent){C.attachEvent("on"+B,function(){return D.call(C,window.event)})}}}function v(C,B){var D=d.get(C);if(D.options){return C}if(B.hover&&B.hoverables[C.nodeName.toLowerCase()]){b.attach(C)}D.options=B;return C}function j(B){var C={};return function(D){if(!k(C,D)){C[D]=B.apply(null,arguments)}return C[D]}}function c(F,E){var B=n.quotedList(E.get("fontFamily").toLowerCase()),D;for(var C=0;D=B[C];++C){if(i[D]){return i[D].get(E.get("fontStyle"),E.get("fontWeight"))}}return null}function g(B){return document.getElementsByTagName(B)}function k(C,B){return C.hasOwnProperty(B)}function h(){var C={},B,F;for(var E=0,D=arguments.length;B=arguments[E],E<D;++E){for(F in B){if(k(B,F)){C[F]=B[F]}}}return C}function o(E,M,C,N,F,D){var K=document.createDocumentFragment(),H;if(M===""){return K}var L=N.separate;var I=M.split(p[L]),B=(L=="words");if(B&&t){if(/^\s/.test(M)){I.unshift("")}if(/\s$/.test(M)){I.push("")}}for(var J=0,G=I.length;J<G;++J){H=z[N.engine](E,B?n.textAlign(I[J],C,J,G):I[J],C,N,F,D,J<G-1);if(H){K.appendChild(H)}}return K}function l(D,M){var C=D.nodeName.toLowerCase();if(M.ignore[C]){return}var E=!M.textless[C];var B=n.getStyle(v(D,M)).extend(M);var F=c(D,B),G,K,I,H,L,J;if(!F){return}for(G=D.firstChild;G;G=I){K=G.nodeType;I=G.nextSibling;if(E&&K==3){if(H){H.appendData(G.data);D.removeChild(G)}else{H=G}if(I){continue}}if(H){D.replaceChild(o(F,n.whiteSpace(H.data,B,H,J),B,M,G,D),H);H=null}if(K==1){if(G.firstChild){if(G.nodeName.toLowerCase()=="cufon"){z[M.engine](F,null,B,M,G,D)}else{arguments.callee(G,M)}}J=G}}}var t=" ".split(/\s+/).length==0;var d=new A();var b=new r();var y=new u();var e=false;var z={},i={},w={autoDetect:false,engine:null,forceHitArea:false,hover:false,hoverables:{a:true},ignore:{applet:1,canvas:1,col:1,colgroup:1,head:1,iframe:1,map:1,optgroup:1,option:1,script:1,select:1,style:1,textarea:1,title:1,pre:1},printable:true,selector:(window.Sizzle||(window.jQuery&&function(B){return jQuery(B)})||(window.dojo&&dojo.query)||(window.Ext&&Ext.query)||(window.YAHOO&&YAHOO.util&&YAHOO.util.Selector&&YAHOO.util.Selector.query)||(window.$$&&function(B){return $$(B)})||(window.$&&function(B){return $(B)})||(document.querySelectorAll&&function(B){return document.querySelectorAll(B)})||g),separate:"words",textless:{dl:1,html:1,ol:1,table:1,tbody:1,thead:1,tfoot:1,tr:1,ul:1},textShadow:"none"};var p={words:/\s/.test("\u00a0")?/[^\S\u00a0]+/:/\s+/,characters:"",none:/^/};m.now=function(){x.ready();return m};m.refresh=function(){y.repeat.apply(y,arguments);return m};m.registerEngine=function(C,B){if(!B){return m}z[C]=B;return m.set("engine",C)};m.registerFont=function(D){if(!D){return m}var B=new s(D),C=B.family;if(!i[C]){i[C]=new f()}i[C].add(B);return m.set("fontFamily",'"'+C+'"')};m.replace=function(D,C,B){C=h(w,C);if(!C.engine){return m}if(!e){n.addClass(x.root(),"cufon-active cufon-loading");n.ready(function(){n.addClass(n.removeClass(x.root(),"cufon-loading"),"cufon-ready")});e=true}if(C.hover){C.forceHitArea=true}if(C.autoDetect){delete C.fontFamily}if(typeof C.textShadow=="string"){C.textShadow=n.textShadow(C.textShadow)}if(typeof C.color=="string"&&/^-/.test(C.color)){C.textGradient=n.gradient(C.color)}else{delete C.textGradient}if(!B){y.add(D,arguments)}if(D.nodeType||typeof D=="string"){D=[D]}n.ready(function(){for(var F=0,E=D.length;F<E;++F){var G=D[F];if(typeof G=="string"){m.replace(C.selector(G),C,true)}else{l(G,C)}}});return m};m.set=function(B,C){w[B]=C;return m};return m})();Cufon.registerEngine("canvas",(function(){var b=document.createElement("canvas");if(!b||!b.getContext||!b.getContext.apply){return}b=null;var a=Cufon.CSS.supports("display","inline-block");var e=!a&&(document.compatMode=="BackCompat"||/frameset|transitional/i.test(document.doctype.publicId));var f=document.createElement("style");f.type="text/css";f.appendChild(document.createTextNode(("cufon{text-indent:0;}@media screen,projection{cufon{display:inline;display:inline-block;position:relative;vertical-align:middle;"+(e?"":"font-size:1px;line-height:1px;")+"}cufon cufontext{display:-moz-inline-box;display:inline-block;width:0;height:0;overflow:hidden;text-indent:-10000in;}"+(a?"cufon canvas{position:relative;}":"cufon canvas{position:absolute;}")+"}@media print{cufon{padding:0;}cufon canvas{display:none;}}").replace(/;/g,"!important;")));document.getElementsByTagName("head")[0].appendChild(f);function d(p,h){var n=0,m=0;var g=[],o=/([mrvxe])([^a-z]*)/g,k;generate:for(var j=0;k=o.exec(p);++j){var l=k[2].split(",");switch(k[1]){case"v":g[j]={m:"bezierCurveTo",a:[n+~~l[0],m+~~l[1],n+~~l[2],m+~~l[3],n+=~~l[4],m+=~~l[5]]};break;case"r":g[j]={m:"lineTo",a:[n+=~~l[0],m+=~~l[1]]};break;case"m":g[j]={m:"moveTo",a:[n=~~l[0],m=~~l[1]]};break;case"x":g[j]={m:"closePath"};break;case"e":break generate}h[g[j].m].apply(h,g[j].a)}return g}function c(m,k){for(var j=0,h=m.length;j<h;++j){var g=m[j];k[g.m].apply(k,g.a)}}return function(V,w,P,t,C,W){var k=(w===null);if(k){w=C.getAttribute("alt")}var A=V.viewBox;var m=P.getSize("fontSize",V.baseSize);var B=0,O=0,N=0,u=0;var z=t.textShadow,L=[];if(z){for(var U=z.length;U--;){var F=z[U];var K=m.convertFrom(parseFloat(F.offX));var I=m.convertFrom(parseFloat(F.offY));L[U]=[K,I];if(I<B){B=I}if(K>O){O=K}if(I>N){N=I}if(K<u){u=K}}}var Z=Cufon.CSS.textTransform(w,P).split("");var E=V.spacing(Z,~~m.convertFrom(parseFloat(P.get("letterSpacing"))||0),~~m.convertFrom(parseFloat(P.get("wordSpacing"))||0));if(!E.length){return null}var h=E.total;O+=A.width-E[E.length-1];u+=A.minX;var s,n;if(k){s=C;n=C.firstChild}else{s=document.createElement("cufon");s.className="cufon cufon-canvas";s.setAttribute("alt",w);n=document.createElement("canvas");s.appendChild(n);if(t.printable){var S=document.createElement("cufontext");S.appendChild(document.createTextNode(w));s.appendChild(S)}}var aa=s.style;var H=n.style;var j=m.convert(A.height);var Y=Math.ceil(j);var M=Y/j;var G=M*Cufon.CSS.fontStretch(P.get("fontStretch"));var J=h*G;var Q=Math.ceil(m.convert(J+O-u));var o=Math.ceil(m.convert(A.height-B+N));n.width=Q;n.height=o;H.width=Q+"px";H.height=o+"px";B+=A.minY;H.top=Math.round(m.convert(B-V.ascent))+"px";H.left=Math.round(m.convert(u))+"px";var r=Math.max(Math.ceil(m.convert(J)),0)+"px";if(a){aa.width=r;aa.height=m.convert(V.height)+"px"}else{aa.paddingLeft=r;aa.paddingBottom=(m.convert(V.height)-1)+"px"}var X=n.getContext("2d"),D=j/A.height;X.scale(D,D*M);X.translate(-u,-B);X.save();function T(){var x=V.glyphs,ab,l=-1,g=-1,y;X.scale(G,1);while(y=Z[++l]){var ab=x[Z[l]]||V.missingGlyph;if(!ab){continue}if(ab.d){X.beginPath();if(ab.code){c(ab.code,X)}else{ab.code=d("m"+ab.d,X)}X.fill()}X.translate(E[++g],0)}X.restore()}if(z){for(var U=z.length;U--;){var F=z[U];X.save();X.fillStyle=F.color;X.translate.apply(X,L[U]);T()}}var q=t.textGradient;if(q){var v=q.stops,p=X.createLinearGradient(0,A.minY,0,A.maxY);for(var U=0,R=v.length;U<R;++U){p.addColorStop.apply(p,v[U])}X.fillStyle=p}else{X.fillStyle=P.get("color")}T();return s}})());Cufon.registerEngine("vml",(function(){var e=document.namespaces;if(!e){return}e.add("cvml","urn:schemas-microsoft-com:vml");e=null;var b=document.createElement("cvml:shape");b.style.behavior="url(#default#VML)";if(!b.coordsize){return}b=null;var h=(document.documentMode||0)<8;document.write(('<style type="text/css">cufoncanvas{text-indent:0;}@media screen{cvml\\:shape,cvml\\:rect,cvml\\:fill,cvml\\:shadow{behavior:url(#default#VML);display:block;antialias:true;position:absolute;}cufoncanvas{position:absolute;text-align:left;}cufon{display:inline-block;position:relative;vertical-align:'+(h?"middle":"text-bottom")+";}cufon cufontext{position:absolute;left:-10000in;font-size:1px;}a cufon{cursor:pointer}}@media print{cufon cufoncanvas{display:none;}}</style>").replace(/;/g,"!important;"));function c(i,j){return a(i,/(?:em|ex|%)$|^[a-z-]+$/i.test(j)?"1em":j)}function a(l,m){if(m==="0"){return 0}if(/px$/i.test(m)){return parseFloat(m)}var k=l.style.left,j=l.runtimeStyle.left;l.runtimeStyle.left=l.currentStyle.left;l.style.left=m.replace("%","em");var i=l.style.pixelLeft;l.style.left=k;l.runtimeStyle.left=j;return i}function f(l,k,j,n){var i="computed"+n,m=k[i];if(isNaN(m)){m=k.get(n);k[i]=m=(m=="normal")?0:~~j.convertFrom(a(l,m))}return m}var g={};function d(p){var q=p.id;if(!g[q]){var n=p.stops,o=document.createElement("cvml:fill"),i=[];o.type="gradient";o.angle=180;o.focus="0";o.method="sigma";o.color=n[0][1];for(var m=1,l=n.length-1;m<l;++m){i.push(n[m][0]*100+"% "+n[m][1])}o.colors=i.join(",");o.color2=n[l][1];g[q]=o}return g[q]}return function(ac,G,Y,C,K,ad,W){var n=(G===null);if(n){G=K.alt}var I=ac.viewBox;var p=Y.computedFontSize||(Y.computedFontSize=new Cufon.CSS.Size(c(ad,Y.get("fontSize"))+"px",ac.baseSize));var y,q;if(n){y=K;q=K.firstChild}else{y=document.createElement("cufon");y.className="cufon cufon-vml";y.alt=G;q=document.createElement("cufoncanvas");y.appendChild(q);if(C.printable){var Z=document.createElement("cufontext");Z.appendChild(document.createTextNode(G));y.appendChild(Z)}if(!W){y.appendChild(document.createElement("cvml:shape"))}}var ai=y.style;var R=q.style;var l=p.convert(I.height),af=Math.ceil(l);var V=af/l;var P=V*Cufon.CSS.fontStretch(Y.get("fontStretch"));var U=I.minX,T=I.minY;R.height=af;R.top=Math.round(p.convert(T-ac.ascent));R.left=Math.round(p.convert(U));ai.height=p.convert(ac.height)+"px";var F=Y.get("color");var ag=Cufon.CSS.textTransform(G,Y).split("");var L=ac.spacing(ag,f(ad,Y,p,"letterSpacing"),f(ad,Y,p,"wordSpacing"));if(!L.length){return null}var k=L.total;var x=-U+k+(I.width-L[L.length-1]);var ah=p.convert(x*P),X=Math.round(ah);var O=x+","+I.height,m;var J="r"+O+"ns";var u=C.textGradient&&d(C.textGradient);var o=ac.glyphs,S=0;var H=C.textShadow;var ab=-1,aa=0,w;while(w=ag[++ab]){var D=o[ag[ab]]||ac.missingGlyph,v;if(!D){continue}if(n){v=q.childNodes[aa];while(v.firstChild){v.removeChild(v.firstChild)}}else{v=document.createElement("cvml:shape");q.appendChild(v)}v.stroked="f";v.coordsize=O;v.coordorigin=m=(U-S)+","+T;v.path=(D.d?"m"+D.d+"xe":"")+"m"+m+J;v.fillcolor=F;if(u){v.appendChild(u.cloneNode(false))}var ae=v.style;ae.width=X;ae.height=af;if(H){var s=H[0],r=H[1];var B=Cufon.CSS.color(s.color),z;var N=document.createElement("cvml:shadow");N.on="t";N.color=B.color;N.offset=s.offX+","+s.offY;if(r){z=Cufon.CSS.color(r.color);N.type="double";N.color2=z.color;N.offset2=r.offX+","+r.offY}N.opacity=B.opacity||(z&&z.opacity)||1;v.appendChild(N)}S+=L[aa++]}var M=v.nextSibling,t,A;if(C.forceHitArea){if(!M){M=document.createElement("cvml:rect");M.stroked="f";M.className="cufon-vml-cover";t=document.createElement("cvml:fill");t.opacity=0;M.appendChild(t);q.appendChild(M)}A=M.style;A.width=X;A.height=af}else{if(M){q.removeChild(M)}}ai.width=Math.max(Math.ceil(p.convert(k*P)),0);if(h){var Q=Y.computedYAdjust;if(Q===undefined){var E=Y.get("lineHeight");if(E=="normal"){E="1em"}else{if(!isNaN(E)){E+="em"}}Y.computedYAdjust=Q=0.5*(a(ad,E)-parseFloat(ai.height))}if(Q){ai.marginTop=Math.ceil(Q)+"px";ai.marginBottom=Q+"px"}}return y}})());
+			</script>
+			<script>
+				/*!
+				 * The following copyright notice may not be removed under any circumstances.
+				 * 
+				 * Copyright:
+				 * � 1990, 2002 Adobe Systems Incorporated. All rights reserved. � 1989, 1990,
+				 * 2002 The Monotype Corporation Plc. All rights reserved.
+				 * 
+				 * Trademark:
+				 * Rockwell is a trademark of The Monotype Corporation registered in the U.S.
+				 * Patent and Trademark Office and which may be registered in certain other
+				 * jurisdictions.
+				 * 
+				 * Full name:
+				 * RockwellStd
+				 * 
+				 * Designer:
+				 * Unknown
+				 * 
+				 * Vendor URL:
+				 * http://www.adobe.com/type
+				 * 
+				 * License information:
+				 * http://www.adobe.com/type/legal.html
+				 */
+				Cufon.registerFont({"w":195,"face":{"font-family":"Rockwell Std","font-weight":400,"font-stretch":"normal","units-per-em":"360","panose-1":"2 6 6 3 3 4 5 2 1 3","ascent":"244","descent":"-116","x-height":"5","bbox":"-13 -263 360 81.0149","underline-thickness":"18","underline-position":"-18","stemh":"30","stemv":"34","unicode-range":"U+0020-U+007E"},"glyphs":{" ":{"w":90,"k":{"T":14,"V":29,"W":29,"Y":36}},"!":{"d":"44,-66r-9,-104r0,-74r35,0v2,64,-3,121,-8,178r-18,0xm31,0r0,-43r43,0r0,43r-43,0","w":105},"\"":{"d":"27,-153v-3,-29,-6,-58,-5,-91r29,0v1,33,-2,62,-5,91r-19,0xm100,-153v-3,-29,-6,-58,-5,-91r29,0v1,33,-2,62,-5,91r-19,0","w":146},"#":{"d":"15,-178r56,0r15,-70r26,0r-15,70r70,0r14,-70r26,0r-14,70r32,0r0,24r-38,0r-12,62r50,0r0,25r-55,0r-15,70r-26,0r15,-70r-70,0r-15,70r-26,0r15,-70r-33,0r0,-25r38,0r13,-62r-51,0r0,-24xm91,-154r-12,62r70,0r13,-62r-71,0","w":240},"$":{"d":"82,31r0,-27v-39,-3,-72,-27,-71,-78r32,0v2,30,13,45,39,49r0,-81v-45,-9,-67,-31,-67,-68v0,-40,25,-65,67,-69r0,-14r27,0r0,14v39,4,63,29,59,78r-30,0v0,-29,-8,-43,-29,-48r0,78v44,8,71,24,71,66v0,42,-26,68,-71,73r0,27r-27,0xm82,-141r0,-74v-41,5,-42,67,0,74xm109,-100r0,75v26,-5,38,-17,38,-39v0,-21,-10,-30,-38,-36"},"%":{"d":"222,-58v0,-39,20,-64,51,-64v31,0,51,25,51,64v0,39,-20,63,-51,63v-31,0,-51,-24,-51,-63xm251,-58v0,28,7,41,22,41v15,0,23,-13,23,-41v0,-28,-8,-41,-23,-41v-15,0,-22,13,-22,41xm24,-184v0,-39,21,-64,52,-64v31,0,51,25,51,64v0,39,-20,63,-51,63v-31,0,-52,-24,-52,-63xm53,-184v0,28,8,41,23,41v15,0,22,-13,22,-41v0,-28,-7,-42,-22,-42v-15,0,-23,14,-23,42xm65,0r194,-244r25,0r-193,244r-26,0","w":348},"&":{"d":"185,-129r50,0r0,30r-25,0v-6,23,-15,40,-25,52r13,16r37,0r0,31r-55,0r-17,-22v-54,54,-153,18,-152,-56v0,-32,19,-57,56,-74v-35,-38,-11,-96,42,-96v33,0,59,22,59,52v0,24,-13,42,-51,56r49,67v9,-15,15,-34,19,-56xm145,-46r-60,-83v-57,19,-40,102,18,102v15,0,30,-6,42,-19xm99,-163v26,-12,36,-21,36,-34v0,-14,-11,-22,-25,-22v-32,0,-33,31,-11,56","w":243},"(":{"d":"65,-85v0,78,20,110,60,136r0,27v-57,-27,-96,-81,-96,-163v0,-82,39,-137,96,-164r0,27v-40,26,-60,59,-60,137","w":135},")":{"d":"70,-85v0,-78,-20,-111,-60,-137r0,-27v57,27,96,82,96,164v0,82,-39,136,-96,163r0,-27v40,-26,60,-58,60,-136","w":135},"*":{"d":"84,-165v-36,-8,-47,0,-72,-12r10,-31r29,9v6,8,19,17,38,24v-1,-27,-15,-42,-11,-73r31,0v3,31,-9,46,-11,73v19,-7,32,-16,38,-24r30,-9r9,31r-28,9v-10,-3,-23,-2,-44,3v14,16,24,25,33,28r18,25r-26,18r-19,-24v-1,-11,-7,-31,-15,-41v-8,10,-15,30,-16,41r-19,24r-26,-18r18,-25v9,-3,19,-12,33,-28","w":187},"+":{"d":"106,-104r-82,0r0,-27r82,0r0,-83r28,0r0,83r82,0r0,27r-82,0r0,83r-28,0r0,-83","w":240},",":{"d":"31,0r0,-43r43,0v0,46,6,95,-43,92r0,-18v15,-4,22,-11,22,-31r-22,0","w":105,"k":{" ":29}},"-":{"d":"11,-99r106,0r0,30r-106,0r0,-30","w":127},".":{"d":"31,0r0,-43r43,0r0,43r-43,0","w":105,"k":{" ":29}},"\/":{"d":"127,-244r29,0r-125,249r-29,0","w":157},"0":{"d":"13,-122v0,-79,31,-126,85,-126v53,0,84,47,84,126v0,80,-31,126,-84,126v-54,0,-85,-46,-85,-126xm97,-220v-35,0,-49,36,-49,98v0,63,14,98,49,98v31,0,50,-26,50,-98v0,-71,-19,-98,-50,-98"},"1":{"d":"85,-30r0,-185r-33,0r0,-29r67,0r0,214r31,0r0,30r-98,0r0,-30r33,0"},"2":{"d":"171,-182v0,74,-111,87,-121,151r91,0r2,-56r30,0r-2,87r-157,0v0,-33,12,-66,41,-95v38,-38,80,-49,80,-86v0,-23,-16,-39,-40,-39v-34,0,-42,20,-42,67r-32,0v-5,-66,29,-95,74,-95v57,0,76,37,76,66"},"3":{"d":"73,-113r0,-30v35,2,62,-5,62,-37v0,-24,-15,-40,-38,-40v-28,0,-40,19,-40,49r-34,0v-2,-48,26,-77,71,-77v76,0,99,92,40,119v81,24,47,133,-39,133v-48,0,-84,-26,-83,-87r32,0v-8,69,100,79,101,15v0,-34,-32,-48,-72,-45"},"4":{"d":"108,-66r-82,0v-3,-11,-8,-19,-16,-27r102,-154r28,0r0,152r40,0r0,29r-40,0r0,36r23,0r0,30r-81,0r0,-30r26,0r0,-36xm108,-95r-1,-97r-63,97r64,0"},"5":{"d":"54,-141v46,-40,125,-8,125,63v0,45,-27,82,-84,82v-50,0,-78,-29,-82,-82r31,0v4,34,23,54,51,54v29,0,49,-22,49,-54v1,-60,-69,-68,-94,-22v-8,-8,-16,-13,-26,-18r11,-126r130,0r0,65r-30,0r0,-34r-75,0"},"6":{"d":"174,-172r-30,0v-4,-29,-21,-48,-44,-48v-36,0,-50,43,-50,91v41,-51,125,-24,125,49v0,49,-30,84,-73,84v-53,0,-84,-47,-84,-125v0,-80,32,-127,86,-127v41,0,69,29,70,76xm51,-92v5,45,21,66,49,66v26,0,44,-21,44,-51v0,-58,-65,-59,-93,-15"},"7":{"d":"39,0r0,-30r33,0v4,-63,29,-130,63,-183r-84,0r0,33r-30,0r0,-64r153,0r0,23v-35,49,-67,131,-67,191r29,0r0,30r-97,0"},"8":{"d":"55,-128v-63,-31,-38,-120,41,-120v80,0,107,87,44,120v28,11,43,33,43,61v0,44,-33,71,-84,71v-100,0,-114,-103,-44,-132xm98,-141v28,0,44,-16,44,-40v0,-24,-16,-38,-46,-38v-27,0,-43,14,-43,38v0,24,17,40,45,40xm98,-24v30,0,49,-19,49,-45v0,-27,-20,-44,-51,-44v-29,0,-48,17,-48,44v0,27,20,45,50,45"},"9":{"d":"18,-72r30,0v4,29,21,48,44,48v26,0,50,-25,50,-92v-41,51,-125,24,-125,-49v0,-49,30,-83,73,-83v53,0,84,46,84,124v0,80,-32,128,-86,128v-41,0,-69,-29,-70,-76xm140,-153v-5,-45,-20,-66,-48,-66v-26,0,-44,22,-44,52v0,58,65,59,92,14"},":":{"d":"31,-127r0,-43r43,0r0,43r-43,0xm31,0r0,-43r43,0r0,43r-43,0","w":105,"k":{" ":29}},";":{"d":"31,0r0,-43r43,0v0,46,6,95,-43,92r0,-18v15,-4,22,-11,22,-31r-22,0xm31,-127r0,-43r43,0r0,43r-43,0","w":105,"k":{" ":29}},"<":{"d":"61,-117r155,63r0,30r-192,-81r0,-25r192,-81r0,30","w":240},"=":{"d":"24,-173r192,0r0,28r-192,0r0,-28xm24,-90r192,0r0,28r-192,0r0,-28","w":240},">":{"d":"179,-117r-155,-64r0,-30r192,81r0,25r-192,81r0,-30","w":240},"?":{"d":"85,-66r-18,0r-5,-76v29,1,61,-3,60,-39v0,-24,-14,-39,-38,-39v-27,0,-42,17,-40,50r-34,0v-5,-62,41,-78,72,-78v46,0,75,27,75,69v0,33,-21,67,-68,66xm54,0r0,-43r43,0r0,43r-43,0","w":168},"@":{"d":"321,-3r33,0v-32,48,-79,79,-157,79v-121,0,-178,-69,-178,-158v0,-72,44,-181,175,-181v93,0,150,65,150,138v0,62,-48,126,-106,126v-21,0,-34,-9,-34,-29v-42,54,-118,24,-118,-50v0,-81,96,-156,145,-80r6,-27r32,0r-31,141v-2,9,5,15,12,15v16,0,68,-32,68,-97v0,-63,-54,-111,-126,-111v-85,0,-147,65,-147,152v0,81,51,135,152,135v55,0,99,-19,124,-53xm120,-76v0,28,15,50,37,50v55,0,98,-139,23,-139v-42,0,-60,61,-60,89","w":363},"A":{"d":"171,-86r-88,0r-19,55r30,0r0,31r-97,0r0,-31r30,0r67,-186r-29,0r0,-27r125,0r0,27r-29,0r66,186r27,0r0,31r-96,0r0,-31r31,0xm161,-114r-32,-103r-3,0r-34,103r69,0","w":251,"k":{"v":22,"w":4,"y":14,"C":7,"G":11,"O":11,"Q":14,"T":7,"U":9,"V":22,"W":14,"Y":18}},"B":{"d":"38,-31r0,-183r-30,0r0,-30r99,0v83,-3,96,85,45,114v27,9,42,32,42,61v0,28,-15,69,-90,69r-96,0r0,-31r30,0xm75,-143v38,4,75,-7,70,-36v3,-32,-32,-37,-70,-35r0,71xm75,-31v43,3,87,-4,82,-41v7,-29,-38,-45,-82,-40r0,81","w":209,"k":{"U":7,",":7,".":7}},"C":{"d":"224,-99r32,17v-14,53,-59,86,-118,86v-72,0,-123,-52,-123,-126v0,-111,124,-160,203,-100r0,-22r31,0r0,78r-31,0v-14,-31,-44,-50,-79,-50v-49,0,-83,39,-83,93v0,106,143,131,168,24","w":273,"k":{",":14,".":14,"A":9}},"D":{"d":"38,-214r-33,0r0,-30r115,0v95,0,124,60,124,119v0,79,-40,125,-128,125r-111,0r0,-31r33,0r0,-183xm75,-214r0,183r43,0v68,0,89,-41,89,-92v0,-68,-50,-100,-132,-91","w":262,"k":{"V":25,"W":25,"Y":25,",":22,".":22,"A":4}},"E":{"d":"42,-31r0,-183r-32,0r0,-30r203,0r0,73r-30,0r0,-43r-105,0r0,73r91,0r0,30r-91,0r0,80r105,0r0,-44r30,0r0,75r-203,0r0,-31r32,0","w":225},"F":{"d":"37,-31r0,-183r-31,0r0,-30r190,0r0,73r-30,0r0,-43r-92,0r0,73r79,0r0,30r-79,0r0,80r32,0r0,31r-100,0r0,-31r31,0","w":198,"k":{",":50,".":50,"A":32,"a":29,"e":29,"o":29}},"G":{"d":"182,-118r89,0v2,89,-60,122,-124,122v-104,0,-130,-79,-130,-127v0,-57,34,-125,123,-125v35,0,60,9,86,31r0,-27r31,0r0,80r-31,0v-14,-31,-46,-52,-82,-52v-51,0,-87,38,-87,93v0,55,38,95,90,95v41,0,73,-24,79,-59r-44,0r0,-31","w":288,"k":{",":22,".":22}},"H":{"d":"37,-31r0,-183r-27,0r0,-30r93,0r0,30r-29,0r0,70r107,0r0,-70r-29,0r0,-30r94,0r0,30r-28,0r0,183r28,0r0,31r-94,0r0,-31r29,0r0,-82r-107,0r0,82r29,0r0,31r-93,0r0,-31r27,0","w":254},"I":{"d":"38,-31r0,-183r-27,0r0,-30r90,0r0,30r-26,0r0,183r26,0r0,31r-90,0r0,-31r27,0","w":112},"J":{"d":"-13,73r0,-34v27,6,53,6,53,-28r0,-225r-31,0r0,-30r99,0r0,30r-31,0r0,232v-5,60,-48,65,-90,55","w":112,"k":{"u":5,",":11,".":11,"A":4,"a":13,"e":14,"o":14}},"K":{"d":"37,-31r0,-183r-31,0r0,-30r99,0r0,30r-31,0r0,183r28,0r0,31r-96,0r0,-31r31,0xm76,-129r78,-85r-28,0r0,-30r95,0r0,30r-26,0r-74,85r77,98r26,0r0,31r-99,0r0,-31r26,0","w":225,"k":{"y":29,"O":14,"u":7,"e":9,"o":7}},"L":{"d":"37,-31r0,-183r-32,0r0,-30r100,0r0,30r-31,0r0,183r76,0r0,-83r34,0r0,114r-179,0r0,-31r32,0","w":187,"k":{"y":7,"V":36,"W":27,"Y":27}},"M":{"d":"39,-31r0,-183r-30,0r0,-30r84,0r64,167r64,-167r85,0r0,30r-29,0r0,183r29,0r0,31r-89,0r0,-31r26,0r-1,-183r-83,217r-7,0r-83,-217r0,183r26,0r0,31r-86,0r0,-31r30,0","w":315},"N":{"d":"36,-31r0,-183r-35,0r0,-30r84,0r107,190r0,-160r-35,0r0,-30r101,0r0,30r-36,0r0,217r-39,0r-116,-209r0,175r35,0r0,31r-101,0r0,-31r35,0","w":258,"k":{",":14,".":14,"A":5}},"O":{"d":"18,-122v0,-74,53,-126,126,-126v73,0,127,53,127,126v0,73,-54,126,-127,126v-74,0,-126,-52,-126,-126xm58,-122v0,53,37,94,86,94v49,0,86,-41,86,-94v0,-53,-37,-94,-86,-94v-49,0,-86,41,-86,94","w":288,"k":{"V":25,"W":25,"Y":27,",":29,".":29,"A":22,"X":27}},"P":{"d":"197,-169v-1,69,-50,78,-122,75r0,63r32,0r0,31r-100,0r0,-31r31,0r0,-183r-31,0r0,-30r109,0v68,0,81,44,81,75xm75,-123v48,5,93,-10,85,-46v2,-46,-39,-48,-85,-45r0,91","w":206,"k":{",":50,".":50,"A":27,"a":7,"e":11,"o":11}},"Q":{"d":"161,3v24,10,48,18,64,13r-13,30v-43,10,-82,-46,-124,-18r-11,-15v7,-9,17,-10,28,-15v-54,-16,-87,-65,-87,-121v0,-73,53,-125,126,-125v74,0,127,52,127,125v0,80,-62,124,-110,126xm58,-123v0,54,37,95,86,95v49,0,86,-42,86,-95v0,-53,-37,-93,-87,-93v-50,0,-85,39,-85,93","w":288,"k":{"U":11,",":32,".":32}},"R":{"d":"38,-31r0,-183r-33,0r0,-30r113,0v96,-7,100,108,27,124r43,89r30,0r0,31r-53,0r-55,-114r-35,0r0,83r32,0r0,31r-102,0r0,-31r33,0xm75,-145r41,0v61,1,52,-72,4,-69r-45,0r0,69","w":217,"k":{"O":7,"V":7,"W":7,"Y":7}},"S":{"d":"143,-68v1,-60,-132,-22,-131,-113v1,-69,80,-84,126,-48r0,-17r30,0r0,74r-30,0v6,-56,-93,-60,-93,-14v0,52,79,29,114,65v43,45,13,125,-56,125v-22,0,-43,-8,-61,-24r0,20r-30,0r0,-89r30,0r0,22v15,26,34,40,57,40v25,0,44,-18,44,-41","w":191,"k":{",":9,".":9}},"T":{"d":"202,-244r0,92r-30,0r0,-62r-51,0r0,183r32,0r0,31r-100,0r0,-31r32,0r0,-183r-51,0r0,62r-30,0r0,-92r198,0","w":206,"k":{"O":5,",":29,".":29,"A":9,"a":11,"e":18,"o":22,"h":-5,"-":45}},"U":{"d":"172,-214r-29,0r0,-30r96,0r0,30r-31,0r0,141v0,63,-45,77,-84,77v-130,1,-78,-115,-89,-218r-30,0r0,-30r95,0r0,30r-28,0r0,142v0,35,21,46,49,46v36,0,51,-15,51,-49r0,-139","w":243,"k":{",":27,".":27,"A":9}},"V":{"d":"111,3r-81,-217r-31,0r0,-30r97,0r0,30r-29,0r63,164r60,-164r-28,0r0,-30r94,0r0,30r-30,0r-81,217r-34,0","w":254,"k":{"G":18,"O":18,"u":18,",":65,".":65,"A":22,"a":40,"e":40,"o":40,"-":43,":":13,";":13}},"W":{"d":"92,3r-62,-217r-30,0r0,-30r94,0r0,30r-30,0r47,160r44,-160r-29,0r0,-30r112,0r0,30r-29,0r46,160r45,-160r-30,0r0,-30r90,0r0,30r-29,0r-61,217r-35,0r-55,-194r-54,194r-34,0","w":360,"k":{"y":18,"O":18,"u":20,",":58,".":58,"A":14,"a":32,"e":32,"o":32,"-":31,":":13,";":13}},"X":{"d":"37,-31r62,-92r-62,-91r-32,0r0,-30r98,0r0,30r-27,0r42,62r43,-62r-29,0r0,-30r94,0r0,30r-30,0r-60,88r65,95r32,0r0,31r-101,0r0,-31r29,0r-45,-66r-44,66r29,0r0,31r-97,0r0,-31r33,0","w":236},"Y":{"d":"99,-31r0,-80r-73,-103r-30,0r0,-30r101,0r0,30r-31,0r54,75r49,-75r-30,0r0,-30r97,0r0,30r-32,0r-68,103r0,80r33,0r0,31r-103,0r0,-31r33,0","w":232,"k":{"O":27,"u":29,",":43,".":43,"A":18,"a":45,"e":41,"o":43,"-":45,":":13,";":13}},"Z":{"d":"9,0r0,-31r131,-183r-95,0r0,43r-30,0r0,-73r172,0r0,27r-134,186r108,0r0,-47r30,0r0,78r-182,0","w":202},"[":{"d":"38,-245r87,0r0,26r-53,0r0,267r53,0r0,25r-87,0r0,-318","w":135},"\\":{"d":"127,5r-125,-249r29,0r125,249r-29,0","w":157},"]":{"d":"97,73r-87,0r0,-25r53,0r0,-267r-53,0r0,-26r87,0r0,318","w":135},"^":{"d":"96,-244r75,126r-31,0r-55,-94r-57,94r-31,0r76,-126r23,0","w":168},"_":{"d":"182,45r-184,0r0,-18r184,0r0,18","w":180},"a":{"d":"187,-30r0,30r-59,0r0,-21v-39,42,-109,26,-112,-30v-1,-49,68,-71,108,-41v13,-55,-50,-73,-74,-35r-32,-8v14,-26,38,-40,73,-40v92,0,62,71,67,145r29,0xm124,-43r0,-20v-24,-22,-76,-26,-76,12v0,39,54,32,76,8","w":191},"b":{"d":"9,0r0,-30r30,0r0,-185r-29,0r0,-29r63,0r0,98v47,-59,144,-22,144,59v0,82,-100,119,-144,61r0,26r-64,0xm74,-85v0,33,22,58,53,58v31,0,54,-25,54,-60v0,-41,-30,-57,-53,-57v-32,0,-54,24,-54,59","w":232,"k":{"v":14,"y":14,"b":7,"l":7,"u":4,",":22,".":22}},"c":{"d":"144,-106v-3,-23,-20,-38,-45,-38v-30,0,-50,23,-50,57v0,67,81,81,103,28r27,13v-15,33,-43,51,-80,51v-59,0,-86,-48,-86,-91v0,-68,77,-116,131,-72r0,-12r30,0r0,64r-30,0","w":187},"d":{"d":"224,-30r0,30r-65,0r0,-25v-48,53,-141,30,-144,-59v-3,-78,94,-122,144,-64r0,-67r-32,0r0,-29r66,0r0,214r31,0xm51,-85v0,35,22,58,54,58v32,0,54,-25,54,-60v0,-34,-22,-57,-54,-57v-30,0,-54,25,-54,59","w":225,"k":{"v":4,"w":4,"y":9}},"e":{"d":"193,-77r-143,0v4,60,84,69,113,25r30,13v-41,73,-180,49,-180,-46v0,-55,45,-90,89,-90v47,0,91,36,91,98xm51,-101r108,0v-5,-27,-29,-47,-56,-47v-27,0,-47,19,-52,47","w":206,"k":{"v":13,"w":7,"y":14,"b":5,",":7,".":7,"x":4}},"f":{"d":"37,-30r0,-110r-25,0r0,-30r25,0v-5,-44,9,-79,45,-79v24,0,40,14,44,39r-30,4v-1,-11,-4,-16,-12,-16v-19,-1,-12,33,-13,52r28,0r0,30r-28,0r0,110r32,0r0,30r-90,0r0,-30r24,0","w":105,"k":{"l":-4,",":-14,".":-14,"a":-9,"e":-9,"f":-4,"i":-4,"o":-7}},"g":{"d":"221,-170r0,30r-31,0r0,141v-7,89,-102,97,-158,57r22,-25v40,38,117,16,102,-56v-45,56,-143,21,-143,-59v0,-79,93,-122,144,-64r0,-24r64,0xm49,-83v0,35,22,59,53,59v32,0,55,-26,55,-59v0,-33,-23,-58,-54,-58v-31,0,-54,25,-54,58","w":225,"k":{"y":11,",":14,".":14,"a":5,"e":7,"o":7,"g":4}},"h":{"d":"38,-30r0,-185r-30,0r0,-29r64,0r0,94v39,-35,103,-41,103,27r0,93r29,0r0,30r-63,0r0,-116v-1,-46,-41,-29,-69,-7r0,93r29,0r0,30r-94,0r0,-30r31,0","w":206,"k":{"y":11}},"i":{"d":"36,-30r0,-110r-27,0r0,-30r60,0r0,140r27,0r0,30r-87,0r0,-30r27,0xm52,-248v11,0,20,9,20,20v0,11,-9,20,-20,20v-11,0,-20,-9,-20,-20v0,-11,9,-20,20,-20","w":105,"k":{"v":7}},"j":{"d":"-6,75r0,-31v28,6,46,-2,46,-33r0,-151r-26,0r0,-30r60,0r0,169v0,40,-2,77,-61,77v-7,0,-12,0,-19,-1xm56,-248v11,0,20,9,20,20v0,11,-9,20,-20,20v-11,0,-20,-9,-20,-20v0,-11,9,-20,20,-20","w":105},"k":{"d":"39,-30r0,-185r-30,0r0,-29r64,0r0,152r64,-51r-29,0r0,-27r95,0r0,27r-27,0r-63,53r60,60r29,0r0,30r-43,0r-86,-86r0,56r25,0r0,30r-90,0r0,-30r31,0","w":206,"k":{"y":7,"e":11,"o":11}},"l":{"d":"40,-30r0,-185r-31,0r0,-29r64,0r0,214r27,0r0,30r-91,0r0,-30r31,0","w":105,"k":{"w":5,"y":7}},"m":{"d":"41,-30r0,-110r-28,0r0,-30r62,0r0,21v32,-29,80,-36,99,3v24,-19,42,-27,61,-27v63,-3,42,85,45,143r29,0r0,30r-63,0r0,-118v-4,-43,-45,-22,-69,-3r0,91r30,0r0,30r-63,0r0,-118v-8,-42,-39,-22,-69,-3r0,91r29,0r0,30r-94,0r0,-30r31,0","w":311,"k":{"y":7}},"n":{"d":"73,-170r0,21v23,-17,40,-24,58,-24v24,0,45,15,45,48r0,95r29,0r0,30r-63,0r0,-111v-1,-51,-43,-30,-69,-10r0,91r30,0r0,30r-93,0r0,-30r30,0r0,-110r-30,0r0,-30r63,0","w":206,"k":{"v":9,"y":11,"u":4}},"o":{"d":"14,-85v0,-51,38,-90,89,-90v51,0,90,39,90,90v0,51,-39,90,-90,90v-51,0,-89,-39,-89,-90xm50,-85v0,33,23,58,53,58v31,0,54,-25,54,-58v0,-33,-23,-58,-54,-58v-30,0,-53,25,-53,58","w":206,"k":{"v":14,"w":16,"y":18,",":18,".":18,"x":14}},"p":{"d":"33,47r0,-187r-28,0r0,-30r62,0v1,8,-2,21,1,27v44,-60,142,-22,142,59v0,79,-93,118,-143,63r0,68r33,0r0,29r-97,0r0,-29r30,0xm67,-83v0,33,22,57,53,57v33,0,55,-24,55,-60v0,-33,-22,-57,-53,-57v-32,0,-55,25,-55,60","w":225,"k":{"y":11,",":14,".":14}},"q":{"d":"190,47r31,0r0,29r-98,0r0,-29r33,0r0,-69v-49,56,-143,17,-143,-63v0,-81,97,-117,143,-58r0,-27r62,0r0,30r-28,0r0,187xm157,-83v0,-35,-24,-60,-56,-60v-31,0,-53,25,-53,58v0,36,22,59,55,59v31,0,54,-24,54,-57","w":221},"r":{"d":"42,-30r0,-110r-34,0r0,-30r61,0r0,38v17,-36,36,-44,76,-41r0,34v-70,-10,-73,42,-69,109r37,0r0,30r-104,0r0,-30r33,0","w":150,"k":{"v":-5,"y":-5,"l":7,"u":-5,",":22,".":22,"a":9,"e":18,"i":-7,"o":14,"g":11,"c":14,"d":14,"k":7,"n":-11,"p":-5,"q":11,"r":-5,"t":-5}},"s":{"d":"46,-124v0,32,108,9,108,75v0,47,-72,66,-109,40r0,9r-30,0r0,-58r30,0v0,22,17,32,40,33v21,0,35,-8,35,-21v2,-36,-105,-8,-105,-77v0,-44,64,-63,101,-40r0,-7r29,0r0,56r-29,0v2,-38,-70,-41,-70,-10","w":164},"t":{"d":"11,-140r0,-30r22,0r0,-26r34,-31r0,57r31,0r0,30r-31,0r0,98v0,17,14,16,31,10r0,30v-31,11,-65,6,-65,-35r0,-103r-22,0","w":108},"u":{"d":"199,-30r0,30r-63,0r0,-19v-38,33,-103,33,-103,-31r0,-90r-24,0r0,-30r58,0r0,119v3,43,47,21,69,3r0,-92r-29,0r0,-30r63,0r0,140r29,0","w":202},"v":{"d":"85,3r-56,-143r-30,0r0,-30r86,0r0,30r-22,0r36,96r37,-96r-24,0r0,-30r84,0r0,30r-26,0r-55,143r-30,0","k":{",":36,".":36,"a":5,"e":9,"o":13}},"w":{"d":"66,3r-45,-143r-21,0r0,-30r71,0r0,30r-22,0r33,102r32,-102r-19,0r0,-30r83,0r0,30r-19,0r33,102r33,-102r-24,0r0,-30r77,0r0,30r-25,0r-45,143r-32,0r-39,-123r-39,123r-32,0","w":277,"k":{",":29,".":29,"a":5,"e":9,"o":13,"h":7}},"x":{"d":"100,-68r-33,38r22,0r0,30r-83,0r0,-30r25,0r51,-57r-49,-53r-23,0r0,-30r80,0r0,30r-21,0r31,32r29,-32r-17,0r0,-30r80,0r0,30r-28,0r-46,53r53,57r22,0r0,30r-81,0r0,-30r24,0","w":198,"k":{"e":14}},"y":{"d":"87,-3r-56,-137r-28,0r0,-30r84,0r0,30r-20,0r37,94r36,-94r-23,0r0,-30r82,0r0,30r-25,0r-84,216r-57,0r0,-29r34,0","w":202,"k":{",":36,".":36,"a":7,"e":18,"o":18}},"z":{"d":"6,0r0,-28r106,-115r-70,0r0,33r-28,0r0,-60r138,0r0,30r-107,112r77,0r0,-35r30,0r0,63r-146,0","w":161,"k":{"e":4,"o":5}},"{":{"d":"10,-71r0,-27v81,-3,-17,-164,102,-146r0,25v-38,-7,-36,23,-36,59v0,46,-8,63,-37,76v36,11,38,48,37,100v-1,31,9,35,36,34r0,26v-62,6,-66,-34,-66,-93v0,-29,-4,-54,-36,-54","w":119},"|":{"d":"81,-244r28,0r0,320r-28,0r0,-320","w":189},"}":{"d":"110,-98r0,28v-83,3,16,164,-102,146r0,-26v38,7,36,-22,36,-58v0,-46,8,-63,37,-76v-36,-11,-38,-48,-37,-100v1,-31,-9,-36,-36,-35r0,-25v62,-6,65,34,65,93v0,29,5,53,37,53","w":119},"~":{"d":"15,-98r0,-36v33,-43,94,-6,134,3v15,0,32,-10,46,-25r0,38v-53,60,-132,-47,-180,20","w":209},"'":{"d":"23,-153v-3,-29,-6,-58,-5,-91r28,0v1,33,-2,62,-5,91r-18,0","w":63},"`":{"d":"93,-193r-23,0r-51,-55r49,0","w":119},"\u00a0":{"w":90,"k":{"T":14,"V":29,"W":29,"Y":36}}}});
+			</script>
+			
+			<script>
+				// --------- Easy Slider
+
+					$(document).ready(function(){	
+						$("#slider").easySlider({
+							auto: true, 
+							continuous: true,
+							numeric: true
+						});
+					});
+
+				// --------- Tabs
+
+					$(document).ready(function() {
+						//When page loads...
+						$(".tab_content").hide(); //Hide all content
+						$("ul.tabs li:first").addClass("active").show(); //Activate first tab
+						$(".tab_content:first").show(); //Show first tab content
+
+						//On Click Event
+						$("ul.tabs li").click(function() {
+
+							$("ul.tabs li").removeClass("active"); //Remove any "active" class
+							$(this).addClass("active"); //Add "active" class to selected tab
+							$(".tab_content").hide(); //Hide all tab content
+
+							var activeTab = $(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content
+							$(activeTab).fadeIn(1000); //Fade in the active ID content
+							return false;
+						});
+					});
+
+				// --------- Cufon
+
+				Cufon.replace('h3, h4');
+			</script>
+
+		</head>
+		<body>
+			<div id="container">
+				<div id="header">
+					<h1><a href="#">WebsiteName</a></h1>
+					<ul id="nav">
+						<li class="selected cufon" id="home"><a href="#">Home</a></li>
+						<li id="about"><a href="#">About</a></li>
+						<li id="portfolio"><a href="#">Portfolio</a></li>
+						<li id="contact"><a href="#">Contact</a></li>
+					</ul>
+				</div><!-- header -->
+				
+				<div id="featured">
+					<div id="slider">
+						<ul>
+							<li><img src="https://github.com/tatygrassini/Rocking_Layout/raw/master/img/featured-slide1.png" width="900" height="246" alt="We make design that rocks! - Slide 1"></li>
+							<li><img src="https://github.com/tatygrassini/Rocking_Layout/raw/master/img/featured-slide2.png" width="900" height="246" alt="We make design that rocks! - Slide 2"></li>
+							<li><img src="https://github.com/tatygrassini/Rocking_Layout/raw/master/img/featured-slide3.png" width="900" height="246" alt="We make design that rocks! - Slide 3"></li>
+							<li><img src="https://github.com/tatygrassini/Rocking_Layout/raw/master/img/featured-slide4.png" width="900" height="246" alt="We make design that rocks! - Slide 4"></li>
+							<li><img src="https://github.com/tatygrassini/Rocking_Layout/raw/master/img/featured-slide5.png" width="900" height="246" alt="We make design that rocks! - Slide 5"></li>
+						</ul>
+					</div><!-- #slider -->
+				</div><!-- #featured -->
+				
+				<div id="content" class="clearfix"><!-- IE -->
+					
+					<div id="col1">
+						<h3>Welcome to Our Site</h3>
+						<p id="strong"><strong>So you want us to ROCK you!?</strong></p>
+						<p id="welcome">Etiam lectus nulla, vestibulum vel luctus eu, ultricies sit amet arcu. Sem a nibh fringilla blandit. Ut ut metus ut turpis ultricies ullamcorper. Here are some of our <a href="#">rockin’</a> services:</p>
+							
+						<div class="service graphic">
+							<h4 class="RockwellStd">Graphic Design</h4>
+							<p>Etiam lectus nulla, vestibulum vel luctus eu, ultricid sit amet arcu. Awesome graphic designs!</p>
+						</div>
+						
+						<div class="service photography">
+							<h4 class="RockwellStd">Photography</h4>
+							<p>Etiam lectus nulla, vestibulum vel luctus eu, ultricid sit amet arcu. Some text about Photography.</p>
+						</div>
+						
+						<div class="service web">
+							<h4 class="RockwellStd">Web Design</h4>
+							<p>Etiam lectus nulla, vestibulum vel luctus eu, ultricid sit amet arcu. Websites that ROCKS!!!</p>
+						</div>
+					</div><!-- col1 -->
+					
+					<div id="col2">
+					
+						<h3 class="RockwellStd">Our Latest Work</h3>
+						<p id="strong"><strong>Watch us ROCKIN' the world!!</strong></p>
+						
+						<div id="work">
+							<ul class="tabs">
+								<li class="first"><a href="#graphics">Graphics</a></li><!-- added class "first" for IE; not first-child pseudo-class twik yet -->
+								<li><a href="#web">Web</a></li>
+								<li><a href="#photography">Photography</a></li>
+								<li><a href="#print">Print</a></li>
+							</ul>
+							
+							<div id="graphics" class="tab_content">
+								<ul class="samples">
+									<li><a href="#"><img src="https://github.com/tatygrassini/Rocking_Layout/raw/master/img/graphic1.jpg" width="205" height="55" alt="Graphic1"></a></li>
+									<li class="right"><a href="#"><img src="https://github.com/tatygrassini/Rocking_Layout/raw/master/img/graphic2.jpg" width="205" height="55" alt="Graphic2"></a></li>
+									<li><a href="#"><img src="https://github.com/tatygrassini/Rocking_Layout/raw/master/img/graphic3.jpg" width="205" height="55" alt="Graphic3"></a></li>
+									<li class="right"><a href="#"><img src="https://github.com/tatygrassini/Rocking_Layout/raw/master/img/graphic4.jpg" width="205" height="55" alt="Graphic4"><a href="#"></a></li>
+								</ul>
+							</div>
+							
+							<div id="web" class="tab_content">
+								<ul class="samples">
+									<li><a href="#"><a href="#"><img src="https://github.com/tatygrassini/Rocking_Layout/raw/master/img/web1.jpg" width="205" height="55" alt="Web1"></a></li>
+									<li class="right"><a href="#"><img src="https://github.com/tatygrassini/Rocking_Layout/raw/master/img/web2.jpg" width="205" height="55" alt="Web2"></a></li>
+									<li><a href="#"><img src="https://github.com/tatygrassini/Rocking_Layout/raw/master/img/web3.jpg" width="205" height="55" alt="Web3"></a></li>
+									<li class="right"><a href="#"><img src="https://github.com/tatygrassini/Rocking_Layout/raw/master/img/web4.jpg" width="205" height="55" alt="Web4"></a></li>
+								</ul>
+							</div>
+							
+							<div id="photography" class="tab_content">
+								<ul class="samples">
+									<li><a href="#"><a href="#"><img src="https://github.com/tatygrassini/Rocking_Layout/raw/master/img/photo1.jpg" width="205" height="55" alt="Photo1"></a></li>
+									<li class="right"><a href="#"><img src="https://github.com/tatygrassini/Rocking_Layout/raw/master/img/photo2.jpg" width="205" height="55" alt="Photo2"></a></li>
+									<li><a href="#"><img src="https://github.com/tatygrassini/Rocking_Layout/raw/master/img/photo3.jpg" width="205" height="55" alt="Photo3"></a></li>
+									<li class="right"><a href="#"><img src="https://github.com/tatygrassini/Rocking_Layout/raw/master/img/photo4.jpg" width="205" height="55" alt="Photo4"></a></li>
+								</ul>
+							</div>
+							
+							<div id="print" class="tab_content">
+								<ul class="samples">
+									<li><a href="#"><img src="https://github.com/tatygrassini/Rocking_Layout/raw/master/img/print1.jpg" width="205" height="55" alt="Print1"></a></li>
+									<li class="right"><a href="#"><img src="https://github.com/tatygrassini/Rocking_Layout/raw/master/img/print2.jpg" width="205" height="55" alt="Print2"></a></li>
+									<li><a href="#"><img src="https://github.com/tatygrassini/Rocking_Layout/raw/master/img/print3.jpg" width="205" height="55" alt="Print3"></a></li>
+									<li class="right"><a href="#"><img src="https://github.com/tatygrassini/Rocking_Layout/raw/master/img/print4.jpg" width="205" height="55" alt="Print4"></a></li>
+								</ul>
+							</div>
+						</div><!-- work -->
+
+						<div class="subColLeft">
+							<h4 class="RockwellStd">Interesting?</h4>
+							<p>Liked our work!, we’re available for freelance.</p>
+							<p><a href="#" id="hireUsButton">Hire us</a></p>
+						</div>
+						
+						<div class="subColRight">
+							<h4 class="RockwellStd">See more?</h4>
+							<p>What you’ve seen was just some samples.</p>
+							<p><a href="#" id="seeMoreButton">See more</a></p>
+						</div>
+					</div><!-- col2 -->
+					
+				</div><!-- content -->
+				
+				<div id="footer">
+					<div class="box">
+						<h4 class="RockwellStd">Testimonials</h4>
+						<p id="subHeading">See what our clients sayin’</p>
+						<p>Lorem ipsum dolor sit am. Well, this guy is simply awesome!</p>
+						<p id="button"><a href="#">Read more</a></p>
+					</div>
+					
+					<div class="box">
+						<h4 class="RockwellStd">The blog</h4>
+						<p id="subHeading">Latest posts in our blog</p>
+						<p><span id="time">01.02.2009</span><br />
+							Lorem ipsum dolot sit am Simply a blog pos here</p>
+						<p id="button"><a href="#">Read more</a></p>
+					</div>
+					
+					<div class="box">
+						<h4 class="RockwellStd">Twitter</h4>
+						<p id="subHeading">Our latest micro message</p>
+						<p>RT @Mkhaled1 Check out my latest tutorial!.<br />
+						<span id="time">10 hours ago from <a href="#">Web</a><span></p>
+						<p id="button"><a href="#">Follow us</a></p>
+					</div>
+				</div><!-- footer -->
+				
+				<div id="bottom">
+					<ul>
+						<li class="selected"><a href="#">Home</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Portfolio</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+					
+					<p>Copyright - <a href="#">WebsiteName</a> - All rights reserved</p>
+				</div><!-- bottom -->
+				
+			</div><!-- container -->
+		</body>
+	</html>
